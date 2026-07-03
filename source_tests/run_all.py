@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run all source tests with parallel workers and optional resume."""
+"""Run all source tests with parallel workers, prefetch, and optional turbo."""
 
 from __future__ import annotations
 
@@ -14,23 +14,27 @@ from common import (
     SOURCES_DIR,
     SourceConfig,
     TestSettings,
+    install_uvloop,
+    prefetch_lists,
     result_is_fresh,
     run_source_test,
-    save_report,
+    save_report_async,
 )
 
 RANKING_PATH = RESULTS_DIR / "00_RANKING.md"
 
 
-def build_ranking(configs: list[SourceConfig], summaries: list[dict], elapsed: float, settings: TestSettings) -> None:
+def build_ranking(configs: list[SourceConfig], summaries: list[dict], elapsed: float, settings: TestSettings, turbo: bool) -> None:
     ok = [s for s in summaries if s.get("fetch_ok") and s.get("tested", 0) > 0]
     ok.sort(key=lambda x: (-x["success_rate"], -(x["working"]), x.get("median_latency_ms") or 9999))
 
+    mode = "turbo" if turbo else "standard"
     lines = [
         "# 各平台代理可用度排名（独立测试）",
         "",
         f"- **测试时间**: {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}",
         f"- **平台数量**: {len(configs)}",
+        f"- **模式**: {mode}",
         f"- **每平台抽样**: 最多 {settings.max_test} 个",
         f"- **并发**: {settings.concurrency} | **超时**: {settings.timeout}s",
         f"- **验证端点**: icanhazip.com",
@@ -68,7 +72,7 @@ def build_ranking(configs: list[SourceConfig], summaries: list[dict], elapsed: f
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     RANKING_PATH.write_text("\n".join(lines), encoding="utf-8")
     (RESULTS_DIR / "00_RANKING.json").write_text(
-        json.dumps({"elapsed_s": elapsed, "summaries": summaries, "settings": settings.__dict__}, ensure_ascii=False, indent=2),
+        json.dumps({"elapsed_s": elapsed, "summaries": summaries, "settings": settings.__dict__, "turbo": turbo}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
@@ -104,11 +108,11 @@ async def test_one(
         print(f"[{index}/{total}] {cfg.id} ...", flush=True)
 
         def progress(done: int, n: int) -> None:
-            if done == n or done % 20 == 0:
+            if done == n or done % 25 == 0:
                 print(f"       {cfg.id}: {done}/{n}", end="\r", flush=True)
 
         report = await run_source_test(cfg, settings=settings, use_cache=use_cache, on_progress=progress)
-        save_report(cfg, report, settings)
+        await save_report_async(cfg, report, settings)
         elapsed = round(time.perf_counter() - t0, 1)
 
         summary = {
@@ -137,21 +141,28 @@ async def test_one(
         return summary
 
 
-async def main() -> None:
+async def async_main() -> None:
     parser = argparse.ArgumentParser(description="Run isolated proxy source tests")
-    parser.add_argument("--workers", type=int, default=4, help="parallel platforms (default 4)")
-    parser.add_argument("--concurrency", type=int, default=40, help="proxy validate concurrency per platform")
-    parser.add_argument("--timeout", type=float, default=6.0, help="per-request timeout seconds")
+    parser.add_argument("--workers", type=int, default=8, help="parallel platforms (default 8)")
+    parser.add_argument("--concurrency", type=int, default=80, help="proxy validate concurrency per platform")
+    parser.add_argument("--timeout", type=float, default=4.0, help="per-request timeout seconds")
     parser.add_argument("--max-test", type=int, default=50, help="max proxies sampled per platform")
     parser.add_argument("--skip-existing", action="store_true", help="skip if result < 1h old")
     parser.add_argument("--no-cache", action="store_true", help="refetch lists, ignore .cache")
     parser.add_argument("--no-https", action="store_true", help="skip HTTPS check (faster)")
+    parser.add_argument("--no-prefetch", action="store_true", help="skip parallel list prefetch")
+    parser.add_argument("--turbo", action="store_true", help="极限模式: workers=12 concurrency=120 timeout=3.5")
     parser.add_argument("--only", type=str, default="", help="comma-separated source ids")
     args = parser.parse_args()
 
+    workers = 12 if args.turbo else args.workers
+    concurrency = 120 if args.turbo else args.concurrency
+    timeout = 3.5 if args.turbo else args.timeout
+
     settings = TestSettings(
-        timeout=args.timeout,
-        concurrency=args.concurrency,
+        timeout=timeout,
+        connect_timeout=min(2.0, timeout * 0.5),
+        concurrency=concurrency,
         max_test=args.max_test,
         check_https=not args.no_https,
     )
@@ -168,8 +179,9 @@ async def main() -> None:
         print("No sources found. Run: python bootstrap_sources.py")
         return
 
+    mode = "TURBO" if args.turbo else "standard"
     print(
-        f"=== Source Tests: {len(configs)} platforms | workers={args.workers} "
+        f"=== Source Tests [{mode}]: {len(configs)} platforms | workers={workers} "
         f"concurrency={settings.concurrency} timeout={settings.timeout}s ===\n",
         flush=True,
     )
@@ -185,11 +197,19 @@ async def main() -> None:
         else:
             to_run.append((i, cfg))
 
-    sem = asyncio.Semaphore(args.workers)
+    use_cache = not args.no_cache
+    if to_run and not args.no_prefetch:
+        prefetch_targets = [cfg for _, cfg in to_run]
+        t_prefetch = time.perf_counter()
+        print(f"Prefetching {len(prefetch_targets)} lists ...", flush=True)
+        await prefetch_lists(prefetch_targets, use_cache=use_cache, workers=16 if args.turbo else 12)
+        print(f"Prefetch done in {round(time.perf_counter() - t_prefetch, 1)}s\n", flush=True)
+
+    sem = asyncio.Semaphore(workers)
     if to_run:
         results = await asyncio.gather(
             *[
-                test_one(cfg, settings, idx, len(configs), not args.no_cache, sem)
+                test_one(cfg, settings, idx, len(configs), use_cache, sem)
                 for idx, cfg in to_run
             ]
         )
@@ -197,7 +217,7 @@ async def main() -> None:
 
     summaries.sort(key=lambda s: s["id"])
     elapsed = round(time.time() - started, 1)
-    build_ranking(configs, summaries, elapsed, settings)
+    build_ranking(configs, summaries, elapsed, settings, args.turbo)
 
     ok = [s for s in summaries if s.get("fetch_ok") and s.get("tested", 0) > 0]
     ok.sort(key=lambda x: (-x["success_rate"], -(x["working"])))
@@ -210,5 +230,12 @@ async def main() -> None:
             print(f"  {s['id']}: {s['success_rate']}% ({s['working']}/{s['tested']})")
 
 
+def main() -> None:
+    uv = install_uvloop()
+    if uv:
+        print("uvloop: enabled\n", flush=True)
+    asyncio.run(async_main())
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

@@ -3,66 +3,42 @@
   "platform": "jetkai/proxy-list",
   "protocol_label": "SOCKS5",
   "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
-  "tested_at": "2026-07-03 15:45:05 UTC",
+  "tested_at": "2026-07-03 17:34:35 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 97.2,
-  "validate_ms": 5225.2,
+  "fetch_ms": 0.0,
+  "validate_ms": 3659.8,
   "total_fetched": 405,
   "total_tested": 50,
-  "working": 8,
+  "working": 4,
   "https_working": 0,
-  "success_rate": 16.0,
-  "avg_latency_ms": 511.9,
-  "median_latency_ms": 555.0,
+  "success_rate": 8.0,
+  "avg_latency_ms": 812.7,
+  "median_latency_ms": 555.9,
   "working_proxies": [
     {
-      "proxy": "socks5://192.111.134.10:4145",
-      "latency_ms": 120.4,
+      "proxy": "socks5://192.111.129.145:16894",
+      "latency_ms": 486.2,
       "https_ok": false,
-      "exit_ip": "192.111.134.10"
+      "exit_ip": "192.111.129.145"
     },
     {
-      "proxy": "socks5://192.252.214.20:15864",
-      "latency_ms": 484.4,
+      "proxy": "socks5://192.111.139.162:4145",
+      "latency_ms": 487.6,
       "https_ok": false,
-      "exit_ip": "192.252.214.20"
+      "exit_ip": "192.111.139.162"
     },
     {
-      "proxy": "socks5://192.111.130.5:17002",
-      "latency_ms": 485.0,
+      "proxy": "socks5://184.181.217.201:4145",
+      "latency_ms": 624.2,
       "https_ok": false,
-      "exit_ip": "192.111.130.5"
+      "exit_ip": "184.181.217.201"
     },
     {
-      "proxy": "socks5://192.111.135.17:18302",
-      "latency_ms": 485.4,
+      "proxy": "socks5://98.188.47.132:4145",
+      "latency_ms": 1652.9,
       "https_ok": false,
-      "exit_ip": "192.111.135.17"
-    },
-    {
-      "proxy": "socks5://24.249.199.4:4145",
-      "latency_ms": 624.7,
-      "https_ok": false,
-      "exit_ip": "24.249.199.4"
-    },
-    {
-      "proxy": "socks5://184.178.172.17:4145",
-      "latency_ms": 628.3,
-      "https_ok": false,
-      "exit_ip": "184.178.172.17"
-    },
-    {
-      "proxy": "socks5://174.77.111.196:4145",
-      "latency_ms": 630.1,
-      "https_ok": false,
-      "exit_ip": "174.77.111.196"
-    },
-    {
-      "proxy": "socks5://98.170.57.249:4145",
-      "latency_ms": 636.9,
-      "https_ok": false,
-      "exit_ip": "98.170.57.249"
+      "exit_ip": "98.188.47.132"
     }
   ],
   "sample_errors": [],
@@ -78,9 +54,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

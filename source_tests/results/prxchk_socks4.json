@@ -3,11 +3,11 @@
   "platform": "prxchk/proxy-list",
   "protocol_label": "SOCKS4",
   "url": "https://raw.githubusercontent.com/prxchk/proxy-list/main/socks4.txt",
-  "tested_at": "2026-07-03 15:45:38 UTC",
+  "tested_at": "2026-07-03 17:34:42 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 10.3,
-  "validate_ms": 3008.2,
+  "fetch_ms": 0.0,
+  "validate_ms": 2006.4,
   "total_fetched": 32,
   "total_tested": 32,
   "working": 0,
@@ -29,9 +29,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

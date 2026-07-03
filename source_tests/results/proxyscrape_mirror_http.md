@@ -4,10 +4,10 @@
 - **URL**: `https://raw.githubusercontent.com/proxyscrape/free-proxy-list/main/proxies/http.txt`
 - **Scheme**: http
 - **更新频率**: 定期
-- **测试时间**: 2026-07-03 15:45:32 UTC
+- **测试时间**: 2026-07-03 17:34:42 UTC
 - **验证端点**: `http://icanhazip.com` / `https://icanhazip.com`
 - **抽样上限**: 50
-- **并发/超时**: 40 / 6.0s
+- **并发/超时**: 80 / 4.0s
 
 > GitHub mirror
 

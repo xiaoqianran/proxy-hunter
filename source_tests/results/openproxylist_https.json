@@ -3,36 +3,30 @@
   "platform": "roosterkid/openproxylist",
   "protocol_label": "HTTPS",
   "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
-  "tested_at": "2026-07-03 15:45:07 UTC",
+  "tested_at": "2026-07-03 17:34:36 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 132.3,
-  "validate_ms": 9605.9,
-  "total_fetched": 124,
+  "fetch_ms": 0.0,
+  "validate_ms": 4009.9,
+  "total_fetched": 139,
   "total_tested": 50,
-  "working": 3,
-  "https_working": 1,
-  "success_rate": 6.0,
-  "avg_latency_ms": 1878.7,
-  "median_latency_ms": 1785.0,
+  "working": 2,
+  "https_working": 0,
+  "success_rate": 4.0,
+  "avg_latency_ms": 508.7,
+  "median_latency_ms": 508.7,
   "working_proxies": [
     {
       "proxy": "http://190.7.138.78:80",
-      "latency_ms": 426.8,
+      "latency_ms": 294.4,
       "https_ok": false,
       "exit_ip": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//E"
     },
     {
-      "proxy": "http://110.34.1.180:32650",
-      "latency_ms": 1785.0,
-      "https_ok": true,
-      "exit_ip": "110.34.1.180"
-    },
-    {
-      "proxy": "http://195.87.182.10:9090",
-      "latency_ms": 3424.4,
+      "proxy": "http://8.219.97.248:80",
+      "latency_ms": 723.0,
       "https_ok": false,
-      "exit_ip": "62.244.206.114"
+      "exit_ip": "8.219.64.236"
     }
   ],
   "sample_errors": [],
@@ -48,9 +42,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

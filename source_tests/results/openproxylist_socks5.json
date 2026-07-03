@@ -3,26 +3,19 @@
   "platform": "roosterkid/openproxylist",
   "protocol_label": "SOCKS5",
   "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt",
-  "tested_at": "2026-07-03 15:45:11 UTC",
+  "tested_at": "2026-07-03 17:34:37 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 107.9,
-  "validate_ms": 4415.4,
-  "total_fetched": 9,
-  "total_tested": 9,
-  "working": 1,
-  "https_working": 1,
-  "success_rate": 11.1,
-  "avg_latency_ms": 839.6,
-  "median_latency_ms": 839.6,
-  "working_proxies": [
-    {
-      "proxy": "socks5://113.160.188.21:1080",
-      "latency_ms": 839.6,
-      "https_ok": true,
-      "exit_ip": "113.168.48.123"
-    }
-  ],
+  "fetch_ms": 0.0,
+  "validate_ms": 2004.9,
+  "total_fetched": 10,
+  "total_tested": 10,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
   "sample_errors": [],
   "config": {
     "id": "openproxylist_socks5",
@@ -36,9 +29,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

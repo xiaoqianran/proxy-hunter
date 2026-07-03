@@ -3,30 +3,36 @@
   "platform": "ShiftyTR/Proxy-List",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt",
-  "tested_at": "2026-07-03 15:44:42 UTC",
+  "tested_at": "2026-07-03 17:34:30 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 18.6,
-  "validate_ms": 3641.4,
+  "fetch_ms": 0.0,
+  "validate_ms": 2512.5,
   "total_fetched": 40,
   "total_tested": 40,
-  "working": 2,
+  "working": 3,
   "https_working": 0,
-  "success_rate": 5.0,
-  "avg_latency_ms": 299.4,
-  "median_latency_ms": 299.4,
+  "success_rate": 7.5,
+  "avg_latency_ms": 857.5,
+  "median_latency_ms": 397.6,
   "working_proxies": [
     {
       "proxy": "http://115.239.234.43:7302",
-      "latency_ms": 295.0,
+      "latency_ms": 377.9,
       "https_ok": false,
       "exit_ip": "{\"code\":\"0x01900012\",\"message\":\"check token fail\"}"
     },
     {
       "proxy": "http://16.163.88.228:80",
-      "latency_ms": 303.8,
+      "latency_ms": 397.6,
       "https_ok": false,
       "exit_ip": "{}"
+    },
+    {
+      "proxy": "http://8.219.97.248:80",
+      "latency_ms": 1797.1,
+      "https_ok": false,
+      "exit_ip": "8.219.64.236"
     }
   ],
   "sample_errors": [],
@@ -42,9 +48,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

@@ -3,26 +3,19 @@
   "platform": "jetkai/proxy-list",
   "protocol_label": "HTTPS",
   "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
-  "tested_at": "2026-07-03 15:45:02 UTC",
+  "tested_at": "2026-07-03 17:34:35 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 90.0,
-  "validate_ms": 3747.5,
+  "fetch_ms": 0.0,
+  "validate_ms": 2008.9,
   "total_fetched": 2161,
   "total_tested": 50,
-  "working": 1,
+  "working": 0,
   "https_working": 0,
-  "success_rate": 2.0,
-  "avg_latency_ms": 352.1,
-  "median_latency_ms": 352.1,
-  "working_proxies": [
-    {
-      "proxy": "http://68.183.185.62:80",
-      "latency_ms": 352.1,
-      "https_ok": false,
-      "exit_ip": "<!DOCTYPE html>\n<html>\n<head>\n<title>Welcome to nginx!</titl"
-    }
-  ],
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
   "sample_errors": [],
   "config": {
     "id": "jetkai_https",
@@ -36,9 +29,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

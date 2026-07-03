@@ -3,24 +3,48 @@
   "platform": "jetkai/proxy-list",
   "protocol_label": "SOCKS4",
   "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt",
-  "tested_at": "2026-07-03 15:45:03 UTC",
+  "tested_at": "2026-07-03 17:34:35 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 135.2,
-  "validate_ms": 4013.9,
+  "fetch_ms": 0.0,
+  "validate_ms": 2508.5,
   "total_fetched": 1603,
   "total_tested": 50,
-  "working": 1,
+  "working": 5,
   "https_working": 0,
-  "success_rate": 2.0,
-  "avg_latency_ms": 390.0,
-  "median_latency_ms": 390.0,
+  "success_rate": 10.0,
+  "avg_latency_ms": 392.2,
+  "median_latency_ms": 384.8,
   "working_proxies": [
     {
-      "proxy": "socks4://192.252.214.20:15864",
-      "latency_ms": 390.0,
+      "proxy": "socks4://142.54.229.249:4145",
+      "latency_ms": 185.8,
       "https_ok": false,
-      "exit_ip": "192.252.214.20"
+      "exit_ip": "142.54.229.249"
+    },
+    {
+      "proxy": "socks4://192.111.137.34:18765",
+      "latency_ms": 384.3,
+      "https_ok": false,
+      "exit_ip": "192.111.137.34"
+    },
+    {
+      "proxy": "socks4://192.111.130.5:17002",
+      "latency_ms": 384.8,
+      "https_ok": false,
+      "exit_ip": "192.111.130.5"
+    },
+    {
+      "proxy": "socks4://184.178.172.3:4145",
+      "latency_ms": 496.0,
+      "https_ok": false,
+      "exit_ip": "184.178.172.3"
+    },
+    {
+      "proxy": "socks4://98.175.31.195:4145",
+      "latency_ms": 510.2,
+      "https_ok": false,
+      "exit_ip": "98.175.31.195"
     }
   ],
   "sample_errors": [],
@@ -36,9 +60,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

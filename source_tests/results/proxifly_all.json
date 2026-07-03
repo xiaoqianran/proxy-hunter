@@ -3,96 +3,66 @@
   "platform": "proxifly/free-proxy-list",
   "protocol_label": "ALL",
   "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/all/data.txt",
-  "tested_at": "2026-07-03 15:45:15 UTC",
+  "tested_at": "2026-07-03 17:34:37 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 27.6,
-  "validate_ms": 9679.7,
+  "fetch_ms": 0.0,
+  "validate_ms": 4363.3,
   "total_fetched": 3700,
   "total_tested": 50,
-  "working": 13,
-  "https_working": 1,
-  "success_rate": 26.0,
-  "avg_latency_ms": 346.9,
-  "median_latency_ms": 494.1,
+  "working": 8,
+  "https_working": 2,
+  "success_rate": 16.0,
+  "avg_latency_ms": 623.5,
+  "median_latency_ms": 338.6,
   "working_proxies": [
     {
-      "proxy": "http://172.64.149.154:80",
-      "latency_ms": 8.3,
+      "proxy": "http://188.114.97.197:80",
+      "latency_ms": 14.6,
       "https_ok": false,
       "exit_ip": "64.23.193.238"
     },
     {
-      "proxy": "http://45.12.31.236:80",
-      "latency_ms": 12.1,
+      "proxy": "http://160.153.0.11:80",
+      "latency_ms": 15.6,
       "https_ok": false,
       "exit_ip": "64.23.193.238"
     },
     {
-      "proxy": "http://23.227.39.254:80",
-      "latency_ms": 13.7,
+      "proxy": "http://172.200.72.48:80",
+      "latency_ms": 147.5,
       "https_ok": false,
-      "exit_ip": "64.23.193.238"
+      "exit_ip": "<!DOCTYPE html>\n<html>\n<head>\n<title>Welcome to nginx!</titl"
     },
     {
-      "proxy": "http://173.245.49.20:80",
-      "latency_ms": 14.7,
+      "proxy": "socks5://72.37.217.3:4145",
+      "latency_ms": 179.2,
       "https_ok": false,
-      "exit_ip": "64.23.193.238"
+      "exit_ip": "72.37.217.3"
     },
     {
-      "proxy": "http://172.67.146.139:80",
-      "latency_ms": 16.9,
+      "proxy": "socks4://184.178.172.14:4145",
+      "latency_ms": 498.0,
       "https_ok": false,
-      "exit_ip": "64.23.193.238"
+      "exit_ip": "184.178.172.14"
     },
     {
-      "proxy": "socks4://142.54.231.38:4145",
-      "latency_ms": 107.8,
-      "https_ok": false,
-      "exit_ip": "142.54.231.38"
-    },
-    {
-      "proxy": "socks5://192.111.130.5:17002",
-      "latency_ms": 494.1,
-      "https_ok": false,
-      "exit_ip": "192.111.130.5"
-    },
-    {
-      "proxy": "socks4://98.170.57.241:4145",
-      "latency_ms": 502.9,
-      "https_ok": false,
-      "exit_ip": "98.170.57.241"
-    },
-    {
-      "proxy": "socks4://184.178.172.5:15303",
-      "latency_ms": 506.0,
-      "https_ok": false,
-      "exit_ip": "184.178.172.5"
-    },
-    {
-      "proxy": "socks5://98.188.47.150:4145",
-      "latency_ms": 622.9,
-      "https_ok": false,
-      "exit_ip": "98.188.47.150"
-    },
-    {
-      "proxy": "socks5://72.195.34.42:4145",
-      "latency_ms": 628.7,
-      "https_ok": false,
-      "exit_ip": "72.195.34.42"
-    },
-    {
-      "proxy": "socks5://82.223.151.29:1080",
-      "latency_ms": 762.4,
+      "proxy": "http://91.107.182.124:82",
+      "latency_ms": 765.5,
       "https_ok": true,
-      "exit_ip": "82.223.151.29"
+      "exit_ip": "2a01:4f8:1c17:f3ed::1"
     },
     {
-      "proxy": "http://172.237.73.24:80",
-      "latency_ms": 819.8,
+      "proxy": "socks5://74.162.65.56:1080",
+      "latency_ms": 1008.6,
+      "https_ok": true,
+      "exit_ip": "74.162.65.56"
+    },
+    {
+      "proxy": "http://8.219.229.53:8200",
+      "latency_ms": 2359.0,
       "https_ok": false,
-      "exit_ip": "172.237.73.24"
+      "exit_ip": "8.219.229.53"
     }
   ],
   "sample_errors": [],
@@ -108,9 +78,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

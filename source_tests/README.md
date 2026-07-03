@@ -29,13 +29,16 @@ python bootstrap_sources.py
 # 2. 测试单个平台
 python run_one.py proxifly_http
 
-# 3. 测试全部（优化后约 3–8 分钟，视网络而定）
+# 3. 测试全部（v3 约 30–50 秒 / 39 平台）
 python run_all.py
 
-# 4. 断点续跑：跳过 1 小时内已有结果
+# 4. 极限模式（uvloop + 更高并发）
+python run_all.py --turbo
+
+# 5. 断点续跑：跳过 1 小时内已有结果
 python run_all.py --skip-existing
 
-# 5. 只测指定平台
+# 6. 只测指定平台
 python run_all.py --only vakhov_http,proxyscrape_api_http
 ```
 
@@ -43,26 +46,35 @@ python run_all.py --only vakhov_http,proxyscrape_api_http
 
 | 参数 | 默认 | 说明 |
 |------|------|------|
-| `--workers` | 4 | 同时跑几个平台 |
-| `--concurrency` | 40 | 每平台验证并发数 |
-| `--timeout` | 6 | 单次请求超时（秒） |
+| `--workers` | 8 | 同时跑几个平台 |
+| `--concurrency` | 80 | 每平台验证并发数 |
+| `--timeout` | 4 | 单次请求超时（秒） |
 | `--max-test` | 50 | 每平台抽样上限 |
+| `--turbo` | off | 极限：workers=12 concurrency=120 timeout=3.5 |
 | `--skip-existing` | off | 跳过 1h 内新鲜结果 |
 | `--no-cache` | off | 忽略 `.cache/`，强制重新拉列表 |
+| `--no-prefetch` | off | 跳过并行预取列表 |
 | `--no-https` | off | 跳过 HTTPS 检测（更快） |
 | `--only` | — | 逗号分隔的 source id |
 
-`run_one.py` 支持 `--concurrency`、`--timeout`、`--max-test`、`--no-cache`、`--no-https`。
+`run_one.py` 支持 `--concurrency`、`--timeout`、`--max-test`、`--no-cache`、`--no-https`、`--turbo`。
 
-## 性能优化（v2）
+## 性能优化
 
-相比初版顺序执行（~10 分钟 / 39 平台）：
+| 版本 | 39 平台耗时 | 关键手段 |
+|------|------------|----------|
+| v1 顺序 | ~635s | 逐平台、逐代理建 Session |
+| v2 并行 | ~68s | 共享 Session、4 workers、列表缓存 |
+| v3 极限 | ~30–40s | uvloop、单遍 HTTP+HTTPS、8 workers、预取、解析缓存 |
 
-1. **共享 HTTP Session** — 每平台一个 `aiohttp.ClientSession`，不再每个代理新建连接
-2. **平台级并行** — `--workers 4` 同时测 4 个来源
-3. **列表缓存** — `.cache/{id}.txt` 1 小时 TTL，避免重复拉 GitHub/CDN
-4. **HTTPS 二阶段** — 仅对 HTTP 通过的代理再测 HTTPS
-5. **更短超时** — 6s 总超时 / 3s 连接超时，失败代理快速淘汰
+v3 细节：
+
+1. **单遍探测** — HTTP 命中后同一 Session 立刻测 HTTPS，消灭二阶段等待
+2. **uvloop** — Linux 下替换默认事件循环
+3. **并行预取** — 验证前 12–16 路并发拉完全部列表
+4. **解析缓存** — `.cache/{id}.proxies.json` 跳过重复 parse
+5. **响应截断** — 只读 96 字节拿出口 IP
+6. **异步写盘** — `asyncio.to_thread` 写报告不阻塞验证
 
 ## 测试规则
 

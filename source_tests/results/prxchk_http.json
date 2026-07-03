@@ -3,24 +3,24 @@
   "platform": "prxchk/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/prxchk/proxy-list/main/http.txt",
-  "tested_at": "2026-07-03 15:45:32 UTC",
+  "tested_at": "2026-07-03 17:34:42 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 10.1,
-  "validate_ms": 6281.1,
+  "fetch_ms": 0.0,
+  "validate_ms": 4714.5,
   "total_fetched": 58,
   "total_tested": 50,
   "working": 1,
   "https_working": 0,
   "success_rate": 2.0,
-  "avg_latency_ms": 3029.7,
-  "median_latency_ms": 3029.7,
+  "avg_latency_ms": 2709.1,
+  "median_latency_ms": 2709.1,
   "working_proxies": [
     {
-      "proxy": "http://190.52.165.120:8080",
-      "latency_ms": 3029.7,
+      "proxy": "http://190.7.138.78:8080",
+      "latency_ms": 2709.1,
       "https_ok": false,
-      "exit_ip": "190.52.165.120"
+      "exit_ip": "190.7.138.78"
     }
   ],
   "sample_errors": [],
@@ -36,9 +36,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

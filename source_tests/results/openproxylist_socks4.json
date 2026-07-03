@@ -3,26 +3,19 @@
   "platform": "roosterkid/openproxylist",
   "protocol_label": "SOCKS4",
   "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt",
-  "tested_at": "2026-07-03 15:45:09 UTC",
+  "tested_at": "2026-07-03 17:34:36 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 122.2,
-  "validate_ms": 8413.2,
+  "fetch_ms": 0.0,
+  "validate_ms": 2012.7,
   "total_fetched": 150,
   "total_tested": 50,
-  "working": 1,
+  "working": 0,
   "https_working": 0,
-  "success_rate": 2.0,
-  "avg_latency_ms": 406.2,
-  "median_latency_ms": 406.2,
-  "working_proxies": [
-    {
-      "proxy": "socks4://193.122.105.251:65535",
-      "latency_ms": 406.2,
-      "https_ok": false,
-      "exit_ip": "193.122.105.251"
-    }
-  ],
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
   "sample_errors": [],
   "config": {
     "id": "openproxylist_socks4",
@@ -36,9 +29,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true

@@ -22,19 +22,29 @@ CACHE_DIR = ROOT / ".cache"
 
 TEST_HTTP = "http://icanhazip.com"
 TEST_HTTPS = "https://icanhazip.com"
+UA = "ProxyHunter-SourceTest/3.0"
 
 IP_PORT = re.compile(r"^\d+\.\d+\.\d+\.\d+:\d+$")
 IP_IN_LINE = re.compile(r"^\d+\.\d+\.\d+\.\d+:\d+")
 
 
+def install_uvloop() -> bool:
+    try:
+        import uvloop
+        uvloop.install()
+        return True
+    except ImportError:
+        return False
+
+
 @dataclass
 class TestSettings:
-    timeout: float = 6.0
-    connect_timeout: float = 3.0
-    concurrency: int = 40
+    timeout: float = 4.0
+    connect_timeout: float = 2.0
+    concurrency: int = 80
     max_test: int = 50
     check_https: bool = True
-    https_only_for_hits: bool = True  # skip HTTPS probe when HTTP fails
+    https_only_for_hits: bool = True
 
 
 @dataclass
@@ -90,6 +100,16 @@ def _timeout(settings: TestSettings) -> aiohttp.ClientTimeout:
         total=settings.timeout,
         connect=settings.connect_timeout,
         sock_connect=settings.connect_timeout,
+        sock_read=settings.timeout,
+    )
+
+
+def _http_connector() -> aiohttp.TCPConnector:
+    return aiohttp.TCPConnector(
+        limit=0,
+        ttl_dns_cache=600,
+        enable_cleanup_closed=True,
+        force_close=True,
     )
 
 
@@ -131,97 +151,141 @@ def _dedupe(proxies: list[str]) -> list[str]:
     return out
 
 
+def _cache_paths(cfg: SourceConfig) -> tuple[Path, Path]:
+    return CACHE_DIR / f"{cfg.id}.txt", CACHE_DIR / f"{cfg.id}.proxies.json"
+
+
+def _load_cached_proxies(cfg: SourceConfig) -> list[str] | None:
+    raw_path, parsed_path = _cache_paths(cfg)
+    for path in (parsed_path, raw_path):
+        if not path.exists():
+            continue
+        age = time.time() - path.stat().st_mtime
+        if age >= 3600:
+            continue
+        if path is parsed_path:
+            return json.loads(path.read_text(encoding="utf-8"))
+        text = path.read_text(encoding="utf-8")
+        proxies = parse_body(text, cfg.scheme, cfg.format)
+        try:
+            parsed_path.write_text(json.dumps(proxies), encoding="utf-8")
+        except OSError:
+            pass
+        return proxies
+    return None
+
+
+def _store_cache(cfg: SourceConfig, text: str, proxies: list[str]) -> None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    raw_path, parsed_path = _cache_paths(cfg)
+    raw_path.write_text(text, encoding="utf-8")
+    parsed_path.write_text(json.dumps(proxies), encoding="utf-8")
+
+
 async def fetch_list(
     cfg: SourceConfig,
     session: aiohttp.ClientSession | None = None,
     use_cache: bool = True,
 ) -> tuple[list[str], str | None, float]:
-    cache_path = CACHE_DIR / f"{cfg.id}.txt"
-    if use_cache and cache_path.exists():
-        age = time.time() - cache_path.stat().st_mtime
-        if age < 3600:
-            text = cache_path.read_text(encoding="utf-8")
-            proxies = parse_body(text, cfg.scheme, cfg.format)
-            return proxies, None, 0.0
+    if use_cache:
+        cached = _load_cached_proxies(cfg)
+        if cached is not None:
+            return cached, None, 0.0
 
     start = time.perf_counter()
 
     async def _get(sess: aiohttp.ClientSession) -> tuple[list[str], str | None, float]:
         try:
-            async with sess.get(cfg.url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
+            async with sess.get(cfg.url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
                 ms = (time.perf_counter() - start) * 1000
                 if resp.status != 200:
                     return [], f"HTTP {resp.status}", ms
                 text = await resp.text()
+                proxies = parse_body(text, cfg.scheme, cfg.format)
                 if use_cache:
-                    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-                    cache_path.write_text(text, encoding="utf-8")
-                return parse_body(text, cfg.scheme, cfg.format), None, ms
+                    _store_cache(cfg, text, proxies)
+                return proxies, None, ms
         except Exception as e:
             return [], str(e)[:200], (time.perf_counter() - start) * 1000
 
     if session:
         return await _get(session)
     async with aiohttp.ClientSession(
-        headers={"User-Agent": "ProxyHunter-SourceTest/2.0"},
-        connector=aiohttp.TCPConnector(limit=20, ttl_dns_cache=300),
+        headers={"User-Agent": UA},
+        connector=aiohttp.TCPConnector(limit=32, ttl_dns_cache=300, force_close=True),
     ) as sess:
         return await _get(sess)
 
 
-async def _test_http_http(
+async def prefetch_lists(
+    configs: list[SourceConfig],
+    use_cache: bool = True,
+    workers: int = 16,
+) -> None:
+    if not configs:
+        return
+    sem = asyncio.Semaphore(workers)
+    connector = aiohttp.TCPConnector(limit=workers * 2, ttl_dns_cache=300, force_close=True)
+    async with aiohttp.ClientSession(headers={"User-Agent": UA}, connector=connector) as session:
+
+        async def one(cfg: SourceConfig) -> None:
+            async with sem:
+                await fetch_list(cfg, session=session, use_cache=use_cache)
+
+        await asyncio.gather(*[one(cfg) for cfg in configs])
+
+
+async def _read_exit_ip(resp: aiohttp.ClientResponse) -> str:
+    chunk = await resp.content.read(96)
+    return chunk.decode("utf-8", errors="ignore").strip()[:60]
+
+
+async def _test_http_proxy(
     session: aiohttp.ClientSession,
     proxy: str,
     settings: TestSettings,
-) -> tuple[str, float, str] | None:
+) -> ProxyHit | None:
     try:
         t0 = time.perf_counter()
         async with session.get(TEST_HTTP, proxy=proxy, timeout=_timeout(settings)) as resp:
             if resp.status != 200:
                 return None
-            ip = (await resp.text()).strip()[:60]
-            return proxy, round((time.perf_counter() - t0) * 1000, 1), ip
+            ip = await _read_exit_ip(resp)
+            latency = round((time.perf_counter() - t0) * 1000, 1)
+            https_ok = False
+            if settings.check_https:
+                try:
+                    async with session.get(TEST_HTTPS, proxy=proxy, timeout=_timeout(settings)) as hres:
+                        https_ok = hres.status == 200
+                except Exception:
+                    pass
+            return ProxyHit(proxy, latency, https_ok, ip)
     except Exception:
         return None
 
 
-async def _test_http_https(
-    session: aiohttp.ClientSession,
-    proxy: str,
-    settings: TestSettings,
-) -> bool:
+async def _test_socks_proxy(proxy: str, settings: TestSettings) -> ProxyHit | None:
+    connector = ProxyConnector.from_url(proxy, rdns=True)
     try:
-        async with session.get(TEST_HTTPS, proxy=proxy, timeout=_timeout(settings)) as resp:
-            return resp.status == 200
-    except Exception:
-        return False
-
-
-async def _test_socks_http(
-    proxy: str,
-    settings: TestSettings,
-) -> tuple[str, float, str] | None:
-    try:
-        connector = ProxyConnector.from_url(proxy, rdns=True)
         async with aiohttp.ClientSession(connector=connector, timeout=_timeout(settings)) as session:
             t0 = time.perf_counter()
             async with session.get(TEST_HTTP, timeout=_timeout(settings)) as resp:
                 if resp.status != 200:
                     return None
-                ip = (await resp.text()).strip()[:60]
-                return proxy, round((time.perf_counter() - t0) * 1000, 1), ip
+                ip = await _read_exit_ip(resp)
+                latency = round((time.perf_counter() - t0) * 1000, 1)
+                https_ok = False
+                if settings.check_https:
+                    try:
+                        async with session.get(TEST_HTTPS, timeout=_timeout(settings)) as hres:
+                            https_ok = hres.status == 200
+                    except Exception:
+                        pass
+                return ProxyHit(proxy, latency, https_ok, ip)
     except Exception:
         return None
-
-
-async def _test_socks_https(proxy: str, settings: TestSettings) -> bool:
-    try:
-        connector = ProxyConnector.from_url(proxy, rdns=True)
-        async with aiohttp.ClientSession(connector=connector, timeout=_timeout(settings)) as session:
-            async with session.get(TEST_HTTPS, timeout=_timeout(settings)) as resp:
-                return resp.status == 200
-    except Exception:
-        return False
+    finally:
+        await connector.close()
 
 
 async def validate_proxies(
@@ -229,43 +293,51 @@ async def validate_proxies(
     settings: TestSettings,
     on_progress: Callable[[int, int], None] | None = None,
 ) -> list[ProxyHit]:
+    if not proxies:
+        return []
+
     sem = asyncio.Semaphore(settings.concurrency)
-    http_hits: list[tuple[str, float, str]] = []
-    done = 0
     total = len(proxies)
+    done = 0
+    lock = asyncio.Lock()
+    hits: list[ProxyHit] = []
 
     http_proxies = [p for p in proxies if not p.startswith("socks")]
     socks_proxies = [p for p in proxies if p.startswith("socks")]
 
-    async def run_http_batch() -> None:
+    async def bump() -> int:
         nonlocal done
-        connector = aiohttp.TCPConnector(limit=0, ttl_dns_cache=300, enable_cleanup_closed=True)
-        async with aiohttp.ClientSession(connector=connector, timeout=_timeout(settings)) as session:
+        async with lock:
+            done += 1
+            cur = done
+        if on_progress and (cur == total or cur % 10 == 0):
+            on_progress(cur, total)
+        return cur
+
+    async def run_http_batch() -> None:
+        if not http_proxies:
+            return
+        async with aiohttp.ClientSession(connector=_http_connector(), timeout=_timeout(settings)) as session:
 
             async def one(proxy: str) -> None:
-                nonlocal done
                 async with sem:
-                    hit = await _test_http_http(session, proxy, settings)
-                    done += 1
-                    if on_progress and done % 10 == 0:
-                        on_progress(done, total)
+                    hit = await _test_http_proxy(session, proxy, settings)
+                    await bump()
                     if hit:
-                        http_hits.append(hit)
+                        hits.append(hit)
 
             await asyncio.gather(*[one(p) for p in http_proxies])
 
     async def run_socks_batch() -> None:
-        nonlocal done
+        if not socks_proxies:
+            return
 
         async def one(proxy: str) -> None:
-            nonlocal done
             async with sem:
-                hit = await _test_socks_http(proxy, settings)
-                done += 1
-                if on_progress and done % 10 == 0:
-                    on_progress(done, total)
+                hit = await _test_socks_proxy(proxy, settings)
+                await bump()
                 if hit:
-                    http_hits.append(hit)
+                    hits.append(hit)
 
         await asyncio.gather(*[one(p) for p in socks_proxies])
 
@@ -273,35 +345,7 @@ async def validate_proxies(
 
     if on_progress:
         on_progress(total, total)
-
-    if not settings.check_https or not http_hits:
-        return [ProxyHit(p, lat, False, ip) for p, lat, ip in http_hits]
-
-    https_map: dict[str, bool] = {}
-
-    if http_proxies:
-        connector = aiohttp.TCPConnector(limit=0, ttl_dns_cache=300)
-        async with aiohttp.ClientSession(connector=connector, timeout=_timeout(settings)) as session:
-
-            async def https_one(proxy: str) -> None:
-                async with sem:
-                    https_map[proxy] = await _test_http_https(session, proxy, settings)
-
-            await asyncio.gather(*[https_one(p) for p, _, _ in http_hits if not p.startswith("socks")])
-
-    socks_to_check = [p for p, _, _ in http_hits if p.startswith("socks")]
-    if socks_to_check:
-
-        async def socks_https_one(proxy: str) -> None:
-            async with sem:
-                https_map[proxy] = await _test_socks_https(proxy, settings)
-
-        await asyncio.gather(*[socks_https_one(p) for p in socks_to_check])
-
-    return [
-        ProxyHit(p, lat, https_map.get(p, False), ip)
-        for p, lat, ip in http_hits
-    ]
+    return hits
 
 
 async def run_source_test(
@@ -309,6 +353,7 @@ async def run_source_test(
     settings: TestSettings | None = None,
     use_cache: bool = True,
     on_progress: Callable[[int, int], None] | None = None,
+    fetch_session: aiohttp.ClientSession | None = None,
 ) -> SourceReport:
     settings = settings or TestSettings(max_test=cfg.max_test)
 
@@ -320,7 +365,7 @@ async def run_source_test(
         tested_at=time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
     )
 
-    proxies, err, fetch_ms = await fetch_list(cfg, use_cache=use_cache)
+    proxies, err, fetch_ms = await fetch_list(cfg, session=fetch_session, use_cache=use_cache)
     report.fetch_ms = round(fetch_ms, 1)
     report.total_fetched = len(proxies)
 
@@ -423,6 +468,10 @@ def save_report(cfg: SourceConfig, report: SourceReport, settings: TestSettings 
     (RESULTS_DIR / f"{cfg.id}.md").write_text(
         report_to_md(cfg, report, settings), encoding="utf-8"
     )
+
+
+async def save_report_async(cfg: SourceConfig, report: SourceReport, settings: TestSettings | None = None) -> None:
+    await asyncio.to_thread(save_report, cfg, report, settings)
 
 
 def result_is_fresh(source_id: str, max_age_sec: int = 3600) -> bool:

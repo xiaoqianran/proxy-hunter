@@ -3,10 +3,10 @@
   "platform": "proxyscrape/free-proxy-list",
   "protocol_label": "HTTP Mirror",
   "url": "https://raw.githubusercontent.com/proxyscrape/free-proxy-list/main/proxies/http.txt",
-  "tested_at": "2026-07-03 15:45:32 UTC",
+  "tested_at": "2026-07-03 17:34:42 UTC",
   "fetch_ok": false,
   "fetch_error": "HTTP 404",
-  "fetch_ms": 132.7,
+  "fetch_ms": 9.4,
   "validate_ms": null,
   "total_fetched": 0,
   "total_tested": 0,
@@ -29,9 +29,9 @@
     "max_test": 50
   },
   "settings": {
-    "timeout": 6.0,
-    "connect_timeout": 3.0,
-    "concurrency": 40,
+    "timeout": 4.0,
+    "connect_timeout": 2.0,
+    "concurrency": 80,
     "max_test": 50,
     "check_https": true,
     "https_only_for_hits": true
