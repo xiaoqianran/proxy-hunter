@@ -1,0 +1,129 @@
+[
+  {
+    "proxy": "http://43.133.15.47:3128",
+    "latency": 229.3,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "43.133.15.47"
+  },
+  {
+    "proxy": "socks5://193.25.215.182:22222",
+    "latency": 232.1,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "193.25.215.182"
+  },
+  {
+    "proxy": "http://137.59.47.73:3128",
+    "latency": 672.3,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 429,
+      "moltbook": 200
+    },
+    "ip": "137.59.47.73"
+  },
+  {
+    "proxy": "http://62.90.70.144:7443",
+    "latency": 394.7,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "62.90.70.144"
+  },
+  {
+    "proxy": "http://94.156.180.137:3128",
+    "latency": 7599.6,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "2a01:ecc0:500:93::2"
+  },
+  {
+    "proxy": "socks5://5.255.113.177:1080",
+    "latency": 605.3,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "5.255.113.177"
+  },
+  {
+    "proxy": "socks5://212.77.75.25:1088",
+    "latency": 802.9,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "212.77.75.20"
+  },
+  {
+    "proxy": "http://112.28.149.152:8443",
+    "latency": 1217.6,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "212.87.194.7"
+  },
+  {
+    "proxy": "http://185.181.209.34:8080",
+    "latency": 587.7,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "185.181.209.34"
+  },
+  {
+    "proxy": "socks5://220.158.234.84:1080",
+    "latency": 1173.3,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 403
+    },
+    "ip": "220.158.234.84"
+  },
+  {
+    "proxy": "socks5://183.173.81.251:7898",
+    "latency": null,
+    "targets": {},
+    "error": ""
+  },
+  {
+    "proxy": "socks5://127.0.0.1:9050",
+    "latency": 1181.3,
+    "targets": {
+      "http_ip": 200,
+      "https_ip": 200,
+      "google": 200,
+      "moltbook": 200
+    },
+    "ip": "45.9.156.22"
+  }
+]

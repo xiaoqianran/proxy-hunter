@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "started_at": "2026-07-03T12:19:15.416884+00:00",
+    "finished_at": "2026-07-03T12:27:50.559090+00:00",
+    "duration_s": 515.1,
+    "unique_candidates": 2257,
+    "round1_survivors": 38,
+    "round2_survivors": 22,
+    "test_url": "http://icanhazip.com",
+    "timeout_s": 8,
+    "concurrency": 25,
+    "sources": [
+      {
+        "name": "Geonode API (elite, google, uptime>=80, latency<=500)",
+        "url": "https://proxylist.geonode.com/api/proxy-list?limit=100&sort_by=lastChecked&sort_type=desc&upTime=80&latency=500&anonymityLevel=elite&google=true",
+        "ok": true,
+        "error": null,
+        "fetched": 30
+      },
+      {
+        "name": "GitHub monosans (http)",
+        "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+        "ok": true,
+        "error": null,
+        "fetched": 16
+      },
+      {
+        "name": "GitHub monosans (socks5)",
+        "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt",
+        "ok": true,
+        "error": null,
+        "fetched": 5
+      },
+      {
+        "name": "GitHub jetkai (http)",
+        "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt",
+        "ok": true,
+        "error": null,
+        "fetched": 1801
+      },
+      {
+        "name": "GitHub jetkai (socks5)",
+        "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+        "ok": true,
+        "error": null,
+        "fetched": 405
+      }
+    ]
+  },
+  "proxies": [
+    {
+      "proxy": "http://34.44.49.215:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 128.8,
+      "exit_ip": "35.184.28.196",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://142.93.202.130:3128",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 155.4,
+      "exit_ip": "142.93.202.130",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://43.133.15.47:3128",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": true,
+      "latency_ms": 226.3,
+      "exit_ip": "43.133.15.47",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://174.138.119.88:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 281.7,
+      "exit_ip": "138.197.121.83",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://129.154.217.238:8080",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 314.0,
+      "exit_ip": "129.154.217.238",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://193.239.86.180:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 332.0,
+      "exit_ip": "193.239.86.180",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://137.59.47.73:3128",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": true,
+      "latency_ms": 353.6,
+      "exit_ip": "137.59.47.73",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://62.90.70.144:7443",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": true,
+      "latency_ms": 397.4,
+      "exit_ip": "62.90.70.144",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://183.89.247.182:8080",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 469.1,
+      "exit_ip": "64.23.193.238",
+      "sources": [
+        "GitHub jetkai (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://185.135.69.34:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 535.6,
+      "exit_ip": "185.135.69.34",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://77.110.113.236:8080",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 536.1,
+      "exit_ip": "78.159.131.31",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://202.133.88.173:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 578.6,
+      "exit_ip": "202.133.88.173",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://176.99.134.183:8090",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 610.8,
+      "exit_ip": "176.99.134.183",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://103.101.82.106:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 1415.6,
+      "exit_ip": "103.101.82.106",
+      "sources": [
+        "GitHub jetkai (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://112.28.149.152:8443",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": true,
+      "latency_ms": 1564.2,
+      "exit_ip": "212.87.194.7",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://185.181.209.34:8080",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": true,
+      "latency_ms": 2121.8,
+      "exit_ip": "185.181.209.34",
+      "sources": [
+        "GitHub monosans (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://176.61.151.123:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 2452.9,
+      "exit_ip": "176.61.151.122",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://159.65.245.255:80",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 3102.9,
+      "exit_ip": "159.65.245.255",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://191.102.107.235:999",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 6510.6,
+      "exit_ip": "191.102.107.234",
+      "sources": [
+        "GitHub jetkai (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://45.70.236.194:999",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 7081.1,
+      "exit_ip": "45.70.236.194",
+      "sources": [
+        "GitHub jetkai (http)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://123.58.199.232:8168",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 7687.2,
+      "exit_ip": "123.58.199.232",
+      "sources": [
+        "Geonode API (elite, google, uptime>=80, latency<=500)"
+      ],
+      "error": null
+    },
+    {
+      "proxy": "http://103.19.130.50:8080",
+      "ok": true,
+      "http_ok": true,
+      "https_ok": false,
+      "latency_ms": 7824.8,
+      "exit_ip": "103.19.130.50",
+      "sources": [
+        "GitHub jetkai (http)"
+      ],
+      "error": null
+    }
+  ]
+}
