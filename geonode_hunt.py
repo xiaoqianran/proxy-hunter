@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Deep hunt: Geonode filtered + curated lists, merge with prior results."""
+"""Deep hunt: Geonode filtered + curated lists, merge with prior results.
+
+Typical runtime (benchmark 2026-07-03):
+  - Fetch lists:  ~30 s
+  - Validate:     ~8 min  (~1,900 candidates, CONCURRENCY=25, TIMEOUT=8)
+  - Total:        ~8-10 min (first run); ~5-8 min on re-run (skips known proxies)
+"""
 
 from __future__ import annotations
 

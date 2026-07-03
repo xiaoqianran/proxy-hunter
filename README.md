@@ -54,12 +54,14 @@ pip install -r requirements.txt
 ### 2. Hunt proxies (recommended)
 
 ```bash
-# Deep hunt — Geonode filters + curated lists (~8 min)
+# Deep hunt — Geonode filters + curated lists (~8–10 min)
 python geonode_hunt.py
 
-# Quick hunt — smaller source set (~8 min)
+# Quick hunt — smaller source set (~8–9 min)
 python quick_hunt.py
 ```
+
+> **Runtime**: Both hunt scripts take about **8–10 minutes** on a typical connection. Most of the time is spent validating ~1,900 proxies (25 concurrent, 8s timeout each), not fetching lists.
 
 ### 3. Use the results
 
@@ -146,12 +148,30 @@ proxy-hunter/
 
 ## Scripts
 
-| Script | Purpose | Runtime |
-|--------|---------|---------|
-| `geonode_hunt.py` | Geonode elite filters + monosans/jetkai/ShiftyTR | ~8 min |
-| `quick_hunt.py` | Geonode + monosans + jetkai, 2-round validate | ~8 min |
+| Script | Purpose | Typical runtime |
+|--------|---------|-----------------|
+| `geonode_hunt.py` | Geonode elite filters + monosans/jetkai/ShiftyTR | **8–10 min** |
+| `quick_hunt.py` | Geonode + monosans + jetkai, 2-round validate | **8–9 min** |
 | `final_verify.py` | Test proxies against Google & custom APIs | ~1 min |
 | `generate_channel_reports.py` | Generate `results/channels/*.md` from JSON | <1 sec |
+
+### Runtime details (`geonode_hunt.py`)
+
+Benchmark on 2026-07-03 (normal network):
+
+| Phase | Time | Detail |
+|-------|------|--------|
+| Fetch lists | ~30 s | Geonode API (3 filters × 5 pages) + 3 GitHub lists |
+| Validate proxies | ~8 min | ~1,900 candidates, 25 concurrent, 8s timeout |
+| **Total** | **~8.5 min** | Found 77 working, 11 premium |
+
+| Scenario | Expected time |
+|----------|---------------|
+| First run (no prior results) | 8–10 min |
+| Re-run (skips known proxies in `quick_working.json`) | 5–8 min |
+| Slow network / many timeouts | up to ~15 min |
+
+To run faster, edit `geonode_hunt.py`: lower `TIMEOUT` (e.g. `5`) or reduce Geonode pages (`range(1, 3)`), at the cost of finding fewer proxies.
 
 Archived scripts (`test_proxies.py`, `proxy_hunter.py`) are in `_deprecated/` — see `_deprecated/README.md`.
 
