@@ -4,7 +4,7 @@
 - **URL**: `https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt`
 - **Scheme**: http
 - **更新频率**: 不定期
-- **测试时间**: 2026-07-03 17:34:35 UTC
+- **测试时间**: 2026-07-03 17:37:03 UTC
 - **验证端点**: `http://icanhazip.com` / `https://icanhazip.com`
 - **抽样上限**: 50
 - **并发/超时**: 80 / 4.0s

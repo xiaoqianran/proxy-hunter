@@ -3,34 +3,34 @@
   "platform": "ShiftyTR/Proxy-List",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt",
-  "tested_at": "2026-07-03 17:34:30 UTC",
+  "tested_at": "2026-07-03 17:36:58 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 2512.5,
+  "fetch_ms": 58.0,
+  "validate_ms": 2107.2,
   "total_fetched": 40,
   "total_tested": 40,
   "working": 3,
   "https_working": 0,
   "success_rate": 7.5,
-  "avg_latency_ms": 857.5,
-  "median_latency_ms": 397.6,
+  "avg_latency_ms": 340.3,
+  "median_latency_ms": 332.9,
   "working_proxies": [
     {
-      "proxy": "http://115.239.234.43:7302",
-      "latency_ms": 377.9,
-      "https_ok": false,
-      "exit_ip": "{\"code\":\"0x01900012\",\"message\":\"check token fail\"}"
-    },
-    {
       "proxy": "http://16.163.88.228:80",
-      "latency_ms": 397.6,
+      "latency_ms": 313.5,
       "https_ok": false,
       "exit_ip": "{}"
     },
     {
+      "proxy": "http://115.239.234.43:7302",
+      "latency_ms": 332.9,
+      "https_ok": false,
+      "exit_ip": "{\"code\":\"0x01900012\",\"message\":\"check token fail\"}"
+    },
+    {
       "proxy": "http://8.219.97.248:80",
-      "latency_ms": 1797.1,
+      "latency_ms": 374.4,
       "https_ok": false,
       "exit_ip": "8.219.64.236"
     }

@@ -3,60 +3,54 @@
   "platform": "databay-labs/free-proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/master/http.txt",
-  "tested_at": "2026-07-03 17:34:30 UTC",
+  "tested_at": "2026-07-03 17:36:58 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 4553.0,
+  "fetch_ms": 20.7,
+  "validate_ms": 5704.8,
   "total_fetched": 1849,
   "total_tested": 50,
-  "working": 7,
+  "working": 6,
   "https_working": 2,
-  "success_rate": 14.0,
-  "avg_latency_ms": 1679.2,
-  "median_latency_ms": 1785.0,
+  "success_rate": 12.0,
+  "avg_latency_ms": 1940.8,
+  "median_latency_ms": 1787.2,
   "working_proxies": [
     {
-      "proxy": "http://103.156.15.129:8080",
-      "latency_ms": 948.9,
-      "https_ok": false,
-      "exit_ip": "103.156.15.129"
-    },
-    {
-      "proxy": "http://47.121.114.42:3129",
-      "latency_ms": 1041.3,
+      "proxy": "http://43.167.27.118:3128",
+      "latency_ms": 346.4,
       "https_ok": true,
-      "exit_ip": "47.121.114.42"
+      "exit_ip": "43.167.27.118"
     },
     {
-      "proxy": "http://65.109.178.201:3128",
-      "latency_ms": 1556.0,
+      "proxy": "http://46.8.112.212:3128",
+      "latency_ms": 544.5,
       "https_ok": true,
-      "exit_ip": "65.109.178.201"
+      "exit_ip": "46.8.112.212"
     },
     {
-      "proxy": "http://45.178.68.251:999",
-      "latency_ms": 1785.0,
+      "proxy": "http://94.247.231.172:8080",
+      "latency_ms": 1542.2,
       "https_ok": false,
-      "exit_ip": "45.178.68.242"
+      "exit_ip": "94.247.231.172"
     },
     {
-      "proxy": "http://140.245.238.56:53",
-      "latency_ms": 1809.0,
+      "proxy": "http://45.174.243.146:999",
+      "latency_ms": 2032.2,
       "https_ok": false,
-      "exit_ip": "140.245.238.56"
+      "exit_ip": "45.174.243.146"
     },
     {
-      "proxy": "http://103.127.94.10:8080",
-      "latency_ms": 2127.5,
+      "proxy": "http://114.31.8.202:2024",
+      "latency_ms": 3506.8,
       "https_ok": false,
-      "exit_ip": "103.127.94.9"
+      "exit_ip": "114.31.8.202"
     },
     {
-      "proxy": "http://201.77.108.156:999",
-      "latency_ms": 2487.0,
+      "proxy": "http://45.178.246.7:999",
+      "latency_ms": 3672.8,
       "https_ok": false,
-      "exit_ip": "201.77.108.156"
+      "exit_ip": "45.178.246.2"
     }
   ],
   "sample_errors": [],

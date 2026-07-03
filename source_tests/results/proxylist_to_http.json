@@ -3,24 +3,30 @@
   "platform": "proxylist-to/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt",
-  "tested_at": "2026-07-03 17:34:39 UTC",
+  "tested_at": "2026-07-03 17:37:07 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 4000.6,
+  "fetch_ms": 11.1,
+  "validate_ms": 4003.8,
   "total_fetched": 750,
   "total_tested": 50,
-  "working": 1,
+  "working": 2,
   "https_working": 0,
-  "success_rate": 2.0,
-  "avg_latency_ms": 143.8,
-  "median_latency_ms": 143.8,
+  "success_rate": 4.0,
+  "avg_latency_ms": 280.6,
+  "median_latency_ms": 280.6,
   "working_proxies": [
     {
       "proxy": "https://proxylist.to",
-      "latency_ms": 143.8,
+      "latency_ms": 139.0,
       "https_ok": false,
       "exit_ip": "<!DOCTYPE html><html><head><script>window.onload=function(){"
+    },
+    {
+      "proxy": "http://31.148.207.153:80",
+      "latency_ms": 422.1,
+      "https_ok": false,
+      "exit_ip": "31.148.207.153"
     }
   ],
   "sample_errors": [],

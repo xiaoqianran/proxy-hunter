@@ -3,48 +3,30 @@
   "platform": "TheSpeedX/PROXY-List",
   "protocol_label": "SOCKS4",
   "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt",
-  "tested_at": "2026-07-03 17:34:30 UTC",
+  "tested_at": "2026-07-03 17:36:58 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 2196.9,
+  "fetch_ms": 52.8,
+  "validate_ms": 2077.4,
   "total_fetched": 2468,
   "total_tested": 50,
-  "working": 5,
+  "working": 2,
   "https_working": 0,
-  "success_rate": 10.0,
-  "avg_latency_ms": 420.8,
-  "median_latency_ms": 507.9,
+  "success_rate": 4.0,
+  "avg_latency_ms": 166.6,
+  "median_latency_ms": 166.6,
   "working_proxies": [
     {
-      "proxy": "socks4://67.201.39.14:4145",
-      "latency_ms": 159.9,
+      "proxy": "socks4://68.71.247.130:4145",
+      "latency_ms": 164.0,
       "https_ok": false,
-      "exit_ip": "67.201.39.14"
+      "exit_ip": "68.71.247.130"
     },
     {
-      "proxy": "socks4://198.8.94.170:4145",
-      "latency_ms": 397.7,
+      "proxy": "socks4://104.200.152.30:4145",
+      "latency_ms": 169.1,
       "https_ok": false,
-      "exit_ip": "198.8.94.170"
-    },
-    {
-      "proxy": "socks4://184.178.172.18:15280",
-      "latency_ms": 507.9,
-      "https_ok": false,
-      "exit_ip": "184.178.172.18"
-    },
-    {
-      "proxy": "socks4://68.1.210.189:4145",
-      "latency_ms": 508.7,
-      "https_ok": false,
-      "exit_ip": "68.1.210.189"
-    },
-    {
-      "proxy": "socks4://208.102.51.6:58208",
-      "latency_ms": 529.8,
-      "https_ok": false,
-      "exit_ip": "208.102.51.6"
+      "exit_ip": "104.200.152.30"
     }
   ],
   "sample_errors": [],

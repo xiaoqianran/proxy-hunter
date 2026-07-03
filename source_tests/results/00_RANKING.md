@@ -1,53 +1,53 @@
 # 各平台代理可用度排名（独立测试）
 
-- **测试时间**: 2026-07-03 17:34:49 UTC
+- **测试时间**: 2026-07-03 17:37:15 UTC
 - **平台数量**: 39
 - **模式**: standard
 - **每平台抽样**: 最多 50 个
 - **并发**: 80 | **超时**: 4.0s
 - **验证端点**: icanhazip.com
-- **总耗时**: 18.3s
+- **总耗时**: 17.1s
 
 ## 排名（按成功率 → 可用数）
 
 | 排名 | Source ID | 平台 | 协议 | 拉取 | 测试 | 可用 | 成功率 | HTTPS | 验证耗时 | 中位延迟 |
 |------|-----------|------|------|------|------|------|--------|-------|----------|----------|
-| 1 | `vakhov_http` | vakhov/fresh-proxy-list | HTTP | 524 | 50 | 28 | **56.0%** | 0 | 2010.9ms | 22.1 |
-| 2 | `proxifly_http` | proxifly/free-proxy-list | HTTP | 1177 | 50 | 22 | **44.0%** | 2 | 4406.7ms | 26.1 |
-| 3 | `iplocate_http` | iplocate/free-proxy-list | HTTP | 662 | 50 | 20 | **40.0%** | 3 | 4952.5ms | 463.9 |
-| 4 | `proxyscrape_api_http` | ProxyScrape API v4 | HTTP Elite | 171 | 50 | 19 | **38.0%** | 8 | 5184.5ms | 653.7 |
-| 5 | `monosans_http` | monosans/proxy-list | HTTP | 136 | 50 | 18 | **36.0%** | 15 | 4792.0ms | 508.6 |
-| 6 | `ErcinDedeoglu_http` | ErcinDedeoglu/proxies | HTTP | 26723 | 50 | 17 | **34.0%** | 0 | 4968.9ms | 128.5 |
-| 7 | `proxyscrape_api_socks5` | ProxyScrape API v4 | SOCKS5 Elite | 741 | 50 | 17 | **34.0%** | 8 | 3993.1ms | 970.8 |
-| 8 | `databay_socks5` | databay-labs/free-proxy-list | SOCKS5 | 359 | 50 | 13 | **26.0%** | 6 | 5168.3ms | 1092.2 |
-| 9 | `iplocate_socks5` | iplocate/free-proxy-list | SOCKS5 | 1239 | 50 | 12 | **24.0%** | 5 | 3146.7ms | 625.5 |
-| 10 | `proxyscrape_api_socks4` | ProxyScrape API v4 | SOCKS4 Elite | 147 | 50 | 11 | **22.0%** | 2 | 4062.5ms | 526.6 |
-| 11 | `hookzof_socks5` | hookzof/socks5_list | SOCKS5 | 486 | 50 | 11 | **22.0%** | 5 | 4392.7ms | 1502.1 |
-| 12 | `vakhov_socks5` | vakhov/fresh-proxy-list | SOCKS5 | 21 | 21 | 4 | **19.0%** | 3 | 4262.9ms | 615.9 |
-| 13 | `proxifly_all` | proxifly/free-proxy-list | ALL | 3700 | 50 | 8 | **16.0%** | 2 | 4363.3ms | 338.6 |
-| 14 | `databay_http` | databay-labs/free-proxy-list | HTTP | 1849 | 50 | 7 | **14.0%** | 2 | 4553.0ms | 1785.0 |
-| 15 | `TheSpeedX_http` | TheSpeedX/PROXY-List | HTTP | 2817 | 50 | 7 | **14.0%** | 1 | 4484.9ms | 2397.6 |
-| 16 | `TheSpeedX_socks5` | TheSpeedX/PROXY-List | SOCKS5 | 2306 | 50 | 6 | **12.0%** | 1 | 2846.6ms | 175.8 |
-| 17 | `vakhov_socks4` | vakhov/fresh-proxy-list | SOCKS4 | 165 | 50 | 6 | **12.0%** | 0 | 3519.3ms | 694.5 |
-| 18 | `jetkai_socks4` | jetkai/proxy-list | SOCKS4 | 1603 | 50 | 5 | **10.0%** | 0 | 2508.5ms | 384.8 |
-| 19 | `TheSpeedX_socks4` | TheSpeedX/PROXY-List | SOCKS4 | 2468 | 50 | 5 | **10.0%** | 0 | 2196.9ms | 507.9 |
-| 20 | `jetkai_socks5` | jetkai/proxy-list | SOCKS5 | 405 | 50 | 4 | **8.0%** | 0 | 3659.8ms | 555.9 |
-| 21 | `proxifly_socks5` | proxifly/free-proxy-list | SOCKS5 | 539 | 50 | 4 | **8.0%** | 2 | 3661.0ms | 620.0 |
-| 22 | `ShiftyTR_http` | ShiftyTR/Proxy-List | HTTP | 40 | 40 | 3 | **7.5%** | 0 | 2512.5ms | 397.6 |
-| 23 | `proxifly_socks4` | proxifly/free-proxy-list | SOCKS4 | 771 | 50 | 3 | **6.0%** | 0 | 3562.5ms | 496.5 |
-| 24 | `proxylist_to_socks5` | proxylist-to/proxy-list | SOCKS5 | 196 | 50 | 2 | **4.0%** | 1 | 2012.2ms | 266.4 |
-| 25 | `openproxylist_https` | roosterkid/openproxylist | HTTPS | 139 | 50 | 2 | **4.0%** | 0 | 4009.9ms | 508.7 |
-| 26 | `proxylist_to_http` | proxylist-to/proxy-list | HTTP | 750 | 50 | 1 | **2.0%** | 0 | 4000.6ms | 143.8 |
-| 27 | `proxylist_to_socks4` | proxylist-to/proxy-list | SOCKS4 | 261 | 50 | 1 | **2.0%** | 0 | 2948.6ms | 944.5 |
-| 28 | `prxchk_http` | prxchk/proxy-list | HTTP | 58 | 50 | 1 | **2.0%** | 0 | 4714.5ms | 2709.1 |
-| 29 | `jetkai_http` | jetkai/proxy-list | HTTP | 1801 | 50 | 0 | **0.0%** | 0 | 4010.0ms | — |
-| 30 | `jetkai_https` | jetkai/proxy-list | HTTPS | 2161 | 50 | 0 | **0.0%** | 0 | 2008.9ms | — |
-| 31 | `openproxylist_socks4` | roosterkid/openproxylist | SOCKS4 | 150 | 50 | 0 | **0.0%** | 0 | 2012.7ms | — |
-| 32 | `openproxylist_socks5` | roosterkid/openproxylist | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | 2004.9ms | — |
-| 33 | `proxifly_https` | proxifly/free-proxy-list | HTTPS | 1103 | 50 | 0 | **0.0%** | 0 | 1870.3ms | — |
-| 34 | `prxchk_socks4` | prxchk/proxy-list | SOCKS4 | 32 | 32 | 0 | **0.0%** | 0 | 2006.4ms | — |
-| 35 | `prxchk_socks5` | prxchk/proxy-list | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | 2003.5ms | — |
-| 36 | `vakhov_https` | vakhov/fresh-proxy-list | HTTPS | 6 | 6 | 0 | **0.0%** | 0 | 2000.4ms | — |
+| 1 | `vakhov_http` | vakhov/fresh-proxy-list | HTTP | 524 | 50 | 35 | **70.0%** | 0 | 4021.9ms | 19.6 |
+| 2 | `monosans_http` | monosans/proxy-list | HTTP | 136 | 50 | 23 | **46.0%** | 17 | 5225.1ms | 389.0 |
+| 3 | `proxyscrape_api_http` | ProxyScrape API v4 | HTTP Elite | 171 | 50 | 23 | **46.0%** | 8 | 5795.3ms | 683.2 |
+| 4 | `proxifly_http` | proxifly/free-proxy-list | HTTP | 1177 | 50 | 22 | **44.0%** | 3 | 5388.1ms | 23.9 |
+| 5 | `ErcinDedeoglu_http` | ErcinDedeoglu/proxies | HTTP | 26723 | 50 | 14 | **28.0%** | 0 | 4508.1ms | 107.8 |
+| 6 | `iplocate_http` | iplocate/free-proxy-list | HTTP | 662 | 50 | 12 | **24.0%** | 6 | 4668.0ms | 501.0 |
+| 7 | `databay_socks5` | databay-labs/free-proxy-list | SOCKS5 | 359 | 50 | 11 | **22.0%** | 10 | 4088.6ms | 634.4 |
+| 8 | `proxyscrape_api_socks5` | ProxyScrape API v4 | SOCKS5 Elite | 741 | 50 | 10 | **20.0%** | 4 | 3530.1ms | 670.9 |
+| 9 | `iplocate_socks5` | iplocate/free-proxy-list | SOCKS5 | 1239 | 50 | 10 | **20.0%** | 8 | 3579.9ms | 949.4 |
+| 10 | `proxyscrape_api_socks4` | ProxyScrape API v4 | SOCKS4 Elite | 147 | 50 | 8 | **16.0%** | 1 | 4807.1ms | 501.9 |
+| 11 | `TheSpeedX_http` | TheSpeedX/PROXY-List | HTTP | 2817 | 50 | 8 | **16.0%** | 3 | 4770.4ms | 952.3 |
+| 12 | `vakhov_socks5` | vakhov/fresh-proxy-list | SOCKS5 | 21 | 21 | 3 | **14.3%** | 3 | 2700.3ms | 601.3 |
+| 13 | `proxifly_all` | proxifly/free-proxy-list | ALL | 3700 | 50 | 7 | **14.0%** | 2 | 4005.1ms | 320.1 |
+| 14 | `vakhov_socks4` | vakhov/fresh-proxy-list | SOCKS4 | 165 | 50 | 7 | **14.0%** | 0 | 2526.7ms | 506.1 |
+| 15 | `databay_http` | databay-labs/free-proxy-list | HTTP | 1849 | 50 | 6 | **12.0%** | 2 | 5704.8ms | 1787.2 |
+| 16 | `proxifly_socks5` | proxifly/free-proxy-list | SOCKS5 | 539 | 50 | 5 | **10.0%** | 3 | 2611.6ms | 622.1 |
+| 17 | `hookzof_socks5` | hookzof/socks5_list | SOCKS5 | 486 | 50 | 5 | **10.0%** | 2 | 4120.4ms | 950.9 |
+| 18 | `openproxylist_https` | roosterkid/openproxylist | HTTPS | 139 | 50 | 4 | **8.0%** | 0 | 5630.3ms | 1894.4 |
+| 19 | `ShiftyTR_http` | ShiftyTR/Proxy-List | HTTP | 40 | 40 | 3 | **7.5%** | 0 | 2107.2ms | 332.9 |
+| 20 | `proxifly_socks4` | proxifly/free-proxy-list | SOCKS4 | 771 | 50 | 3 | **6.0%** | 0 | 2537.0ms | 388.8 |
+| 21 | `jetkai_socks5` | jetkai/proxy-list | SOCKS5 | 405 | 50 | 3 | **6.0%** | 0 | 3656.0ms | 620.7 |
+| 22 | `TheSpeedX_socks5` | TheSpeedX/PROXY-List | SOCKS5 | 2306 | 50 | 3 | **6.0%** | 0 | 4047.1ms | 634.3 |
+| 23 | `TheSpeedX_socks4` | TheSpeedX/PROXY-List | SOCKS4 | 2468 | 50 | 2 | **4.0%** | 0 | 2077.4ms | 166.6 |
+| 24 | `proxylist_to_http` | proxylist-to/proxy-list | HTTP | 750 | 50 | 2 | **4.0%** | 0 | 4003.8ms | 280.6 |
+| 25 | `proxylist_to_socks5` | proxylist-to/proxy-list | SOCKS5 | 196 | 50 | 2 | **4.0%** | 0 | 2011.8ms | 415.4 |
+| 26 | `jetkai_socks4` | jetkai/proxy-list | SOCKS4 | 1603 | 50 | 2 | **4.0%** | 0 | 2511.4ms | 442.3 |
+| 27 | `jetkai_https` | jetkai/proxy-list | HTTPS | 2161 | 50 | 1 | **2.0%** | 0 | 4010.3ms | 1816.2 |
+| 28 | `prxchk_http` | prxchk/proxy-list | HTTP | 58 | 50 | 1 | **2.0%** | 1 | 4179.0ms | 2356.6 |
+| 29 | `jetkai_http` | jetkai/proxy-list | HTTP | 1801 | 50 | 0 | **0.0%** | 0 | 2007.0ms | — |
+| 30 | `openproxylist_socks4` | roosterkid/openproxylist | SOCKS4 | 150 | 50 | 0 | **0.0%** | 0 | 2013.5ms | — |
+| 31 | `openproxylist_socks5` | roosterkid/openproxylist | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | 2002.5ms | — |
+| 32 | `proxifly_https` | proxifly/free-proxy-list | HTTPS | 1103 | 50 | 0 | **0.0%** | 0 | 4003.2ms | — |
+| 33 | `proxylist_to_socks4` | proxylist-to/proxy-list | SOCKS4 | 261 | 50 | 0 | **0.0%** | 0 | 2012.9ms | — |
+| 34 | `prxchk_socks4` | prxchk/proxy-list | SOCKS4 | 32 | 32 | 0 | **0.0%** | 0 | 2006.3ms | — |
+| 35 | `prxchk_socks5` | prxchk/proxy-list | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | 2002.9ms | — |
+| 36 | `vakhov_https` | vakhov/fresh-proxy-list | HTTPS | 6 | 6 | 0 | **0.0%** | 0 | 2000.7ms | — |
 
 ## 拉取失败
 

@@ -3,54 +3,60 @@
   "platform": "vakhov/fresh-proxy-list",
   "protocol_label": "SOCKS4",
   "url": "https://vakhov.github.io/fresh-proxy-list/socks4.txt",
-  "tested_at": "2026-07-03 17:34:44 UTC",
+  "tested_at": "2026-07-03 17:37:13 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 3519.3,
+  "fetch_ms": 11.4,
+  "validate_ms": 2526.7,
   "total_fetched": 165,
   "total_tested": 50,
-  "working": 6,
+  "working": 7,
   "https_working": 0,
-  "success_rate": 12.0,
-  "avg_latency_ms": 742.2,
-  "median_latency_ms": 694.5,
+  "success_rate": 14.0,
+  "avg_latency_ms": 448.5,
+  "median_latency_ms": 506.1,
   "working_proxies": [
     {
-      "proxy": "socks4://68.71.249.153:48606",
-      "latency_ms": 130.2,
+      "proxy": "socks4://199.102.104.70:4145",
+      "latency_ms": 151.7,
       "https_ok": false,
-      "exit_ip": "68.71.249.153"
+      "exit_ip": "199.102.104.70"
     },
     {
-      "proxy": "socks4://184.170.248.5:4145",
-      "latency_ms": 382.9,
+      "proxy": "socks4://192.252.215.2:4145",
+      "latency_ms": 388.5,
       "https_ok": false,
-      "exit_ip": "184.170.248.5"
+      "exit_ip": "192.252.215.2"
     },
     {
-      "proxy": "socks4://184.182.240.12:4145",
-      "latency_ms": 490.9,
+      "proxy": "socks4://184.181.217.220:4145",
+      "latency_ms": 499.8,
       "https_ok": false,
-      "exit_ip": "184.182.240.12"
+      "exit_ip": "184.181.217.220"
     },
     {
-      "proxy": "socks4://66.42.224.229:41679",
-      "latency_ms": 898.0,
+      "proxy": "socks4://98.170.57.249:4145",
+      "latency_ms": 506.1,
       "https_ok": false,
-      "exit_ip": "66.42.224.229"
+      "exit_ip": "98.170.57.249"
     },
     {
-      "proxy": "socks4://184.182.240.211:4145",
-      "latency_ms": 1038.6,
+      "proxy": "socks4://98.181.137.83:4145",
+      "latency_ms": 516.4,
       "https_ok": false,
-      "exit_ip": "184.182.240.211"
+      "exit_ip": "98.181.137.83"
     },
     {
-      "proxy": "socks4://98.175.31.195:4145",
-      "latency_ms": 1512.9,
+      "proxy": "socks4://216.68.128.121:4145",
+      "latency_ms": 535.3,
       "https_ok": false,
-      "exit_ip": "98.175.31.195"
+      "exit_ip": "216.68.128.121"
+    },
+    {
+      "proxy": "socks4://208.102.51.6:58208",
+      "latency_ms": 541.9,
+      "https_ok": false,
+      "exit_ip": "208.102.51.6"
     }
   ],
   "sample_errors": [],

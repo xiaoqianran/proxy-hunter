@@ -3,42 +3,36 @@
   "platform": "vakhov/fresh-proxy-list",
   "protocol_label": "SOCKS5",
   "url": "https://vakhov.github.io/fresh-proxy-list/socks5.txt",
-  "tested_at": "2026-07-03 17:34:44 UTC",
+  "tested_at": "2026-07-03 17:37:13 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 4262.9,
+  "fetch_ms": 13.4,
+  "validate_ms": 2700.3,
   "total_fetched": 21,
   "total_tested": 21,
-  "working": 4,
+  "working": 3,
   "https_working": 3,
-  "success_rate": 19.0,
-  "avg_latency_ms": 1025.7,
-  "median_latency_ms": 615.9,
+  "success_rate": 14.3,
+  "avg_latency_ms": 863.5,
+  "median_latency_ms": 601.3,
   "working_proxies": [
     {
-      "proxy": "socks5://5.255.117.127:1080",
-      "latency_ms": 612.7,
-      "https_ok": true,
-      "exit_ip": "5.255.117.127"
-    },
-    {
-      "proxy": "socks5://5.255.117.250:1080",
-      "latency_ms": 613.2,
-      "https_ok": true,
-      "exit_ip": "5.255.117.250"
-    },
-    {
       "proxy": "socks5://5.255.113.177:1080",
-      "latency_ms": 618.5,
+      "latency_ms": 595.2,
       "https_ok": true,
       "exit_ip": "5.255.113.177"
     },
     {
-      "proxy": "socks5://202.62.55.95:1080",
-      "latency_ms": 2258.4,
-      "https_ok": false,
-      "exit_ip": "202.62.55.95"
+      "proxy": "socks5://5.255.117.250:1080",
+      "latency_ms": 601.3,
+      "https_ok": true,
+      "exit_ip": "5.255.117.250"
+    },
+    {
+      "proxy": "socks5://121.169.46.116:1090",
+      "latency_ms": 1394.0,
+      "https_ok": true,
+      "exit_ip": "121.169.46.116"
     }
   ],
   "sample_errors": [],

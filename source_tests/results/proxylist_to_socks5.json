@@ -3,30 +3,30 @@
   "platform": "proxylist-to/proxy-list",
   "protocol_label": "SOCKS5",
   "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks5.txt",
-  "tested_at": "2026-07-03 17:34:40 UTC",
+  "tested_at": "2026-07-03 17:37:09 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 2012.2,
+  "fetch_ms": 9.8,
+  "validate_ms": 2011.8,
   "total_fetched": 196,
   "total_tested": 50,
   "working": 2,
-  "https_working": 1,
+  "https_working": 0,
   "success_rate": 4.0,
-  "avg_latency_ms": 266.4,
-  "median_latency_ms": 266.4,
+  "avg_latency_ms": 415.4,
+  "median_latency_ms": 415.4,
   "working_proxies": [
     {
-      "proxy": "https://proxylist.to",
-      "latency_ms": 145.5,
+      "proxy": "socks5://104.200.152.30:4145",
+      "latency_ms": 206.5,
       "https_ok": false,
-      "exit_ip": "<!DOCTYPE html><html><head><script>window.onload=function(){"
+      "exit_ip": "104.200.152.30"
     },
     {
-      "proxy": "socks5://45.61.188.134:44499",
-      "latency_ms": 387.3,
-      "https_ok": true,
-      "exit_ip": "45.61.188.134"
+      "proxy": "socks5://66.42.224.229:41679",
+      "latency_ms": 624.3,
+      "https_ok": false,
+      "exit_ip": "66.42.224.229"
     }
   ],
   "sample_errors": [],

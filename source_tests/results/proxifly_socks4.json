@@ -3,36 +3,36 @@
   "platform": "proxifly/free-proxy-list",
   "protocol_label": "SOCKS4",
   "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/socks4/data.txt",
-  "tested_at": "2026-07-03 17:34:38 UTC",
+  "tested_at": "2026-07-03 17:37:07 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 3562.5,
+  "fetch_ms": 25.5,
+  "validate_ms": 2537.0,
   "total_fetched": 771,
   "total_tested": 50,
   "working": 3,
   "https_working": 0,
   "success_rate": 6.0,
-  "avg_latency_ms": 812.0,
-  "median_latency_ms": 496.5,
+  "avg_latency_ms": 434.2,
+  "median_latency_ms": 388.8,
   "working_proxies": [
     {
-      "proxy": "socks4://192.111.139.165:4145",
-      "latency_ms": 386.7,
+      "proxy": "socks4://192.111.130.5:17002",
+      "latency_ms": 386.2,
       "https_ok": false,
-      "exit_ip": "192.111.139.165"
+      "exit_ip": "192.111.130.5"
     },
     {
-      "proxy": "socks4://184.182.240.211:4145",
-      "latency_ms": 496.5,
+      "proxy": "socks4://199.58.185.9:4145",
+      "latency_ms": 388.8,
       "https_ok": false,
-      "exit_ip": "184.182.240.211"
+      "exit_ip": "199.58.185.9"
     },
     {
-      "proxy": "socks4://174.77.111.196:4145",
-      "latency_ms": 1552.9,
+      "proxy": "socks4://184.178.172.18:15280",
+      "latency_ms": 527.6,
       "https_ok": false,
-      "exit_ip": "174.77.111.196"
+      "exit_ip": "184.178.172.18"
     }
   ],
   "sample_errors": [],

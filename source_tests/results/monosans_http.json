@@ -3,126 +3,156 @@
   "platform": "monosans/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
-  "tested_at": "2026-07-03 17:34:35 UTC",
+  "tested_at": "2026-07-03 17:37:03 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 0.0,
-  "validate_ms": 4792.0,
+  "fetch_ms": 7.4,
+  "validate_ms": 5225.1,
   "total_fetched": 136,
   "total_tested": 50,
-  "working": 18,
-  "https_working": 15,
-  "success_rate": 36.0,
-  "avg_latency_ms": 778.4,
-  "median_latency_ms": 508.6,
+  "working": 23,
+  "https_working": 17,
+  "success_rate": 46.0,
+  "avg_latency_ms": 811.6,
+  "median_latency_ms": 389.0,
   "working_proxies": [
     {
-      "proxy": "http://104.154.186.48:80",
-      "latency_ms": 118.0,
+      "proxy": "http://34.43.46.91:80",
+      "latency_ms": 104.4,
       "https_ok": true,
-      "exit_ip": "34.134.26.114"
+      "exit_ip": "34.143.0.189"
     },
     {
-      "proxy": "http://34.96.238.40:8080",
-      "latency_ms": 314.5,
+      "proxy": "http://34.43.46.91:443",
+      "latency_ms": 126.1,
       "https_ok": true,
-      "exit_ip": "34.96.238.40"
-    },
-    {
-      "proxy": "http://1.231.81.166:3128",
-      "latency_ms": 335.5,
-      "https_ok": true,
-      "exit_ip": "1.231.81.166"
-    },
-    {
-      "proxy": "http://132.243.234.171:9443",
-      "latency_ms": 337.0,
-      "https_ok": true,
-      "exit_ip": "132.243.234.171"
-    },
-    {
-      "proxy": "http://47.245.117.43:80",
-      "latency_ms": 341.7,
-      "https_ok": true,
-      "exit_ip": "47.245.117.43"
-    },
-    {
-      "proxy": "http://72.56.238.99:9090",
-      "latency_ms": 424.9,
-      "https_ok": true,
-      "exit_ip": "72.56.238.99"
-    },
-    {
-      "proxy": "http://202.28.194.139:31280",
-      "latency_ms": 440.3,
-      "https_ok": true,
-      "exit_ip": "202.28.194.139"
-    },
-    {
-      "proxy": "http://152.32.132.190:7890",
-      "latency_ms": 456.6,
-      "https_ok": true,
-      "exit_ip": "152.32.132.190"
-    },
-    {
-      "proxy": "http://217.217.249.12:3128",
-      "latency_ms": 500.4,
-      "https_ok": true,
-      "exit_ip": "217.217.249.12"
-    },
-    {
-      "proxy": "http://176.12.65.24:443",
-      "latency_ms": 516.9,
-      "https_ok": false,
-      "exit_ip": "216.106.191.187"
-    },
-    {
-      "proxy": "http://103.82.20.76:8080",
-      "latency_ms": 524.3,
-      "https_ok": true,
-      "exit_ip": "171.227.112.95"
-    },
-    {
-      "proxy": "http://91.188.213.143:1080",
-      "latency_ms": 575.2,
-      "https_ok": true,
-      "exit_ip": "91.188.213.143"
-    },
-    {
-      "proxy": "http://101.6.50.192:6382",
-      "latency_ms": 724.8,
-      "https_ok": true,
-      "exit_ip": "188.253.120.136"
+      "exit_ip": "8.231.12.190"
     },
     {
       "proxy": "http://43.167.199.44:3128",
-      "latency_ms": 1007.6,
+      "latency_ms": 219.5,
       "https_ok": true,
       "exit_ip": "43.167.199.44"
     },
     {
-      "proxy": "http://47.252.41.213:443",
-      "latency_ms": 1083.8,
+      "proxy": "http://43.167.27.118:3128",
+      "latency_ms": 222.0,
+      "https_ok": true,
+      "exit_ip": "43.167.27.118"
+    },
+    {
+      "proxy": "http://43.167.13.115:3128",
+      "latency_ms": 224.8,
+      "https_ok": true,
+      "exit_ip": "43.167.13.115"
+    },
+    {
+      "proxy": "http://43.167.16.253:3128",
+      "latency_ms": 228.0,
       "https_ok": false,
-      "exit_ip": "47.252.41.213"
+      "exit_ip": "43.167.16.253"
+    },
+    {
+      "proxy": "http://1.231.81.166:3128",
+      "latency_ms": 296.3,
+      "https_ok": true,
+      "exit_ip": "1.231.81.166"
+    },
+    {
+      "proxy": "http://87.106.120.212:3128",
+      "latency_ms": 311.4,
+      "https_ok": true,
+      "exit_ip": "87.106.120.212"
+    },
+    {
+      "proxy": "http://43.99.100.108:3128",
+      "latency_ms": 313.8,
+      "https_ok": true,
+      "exit_ip": "43.99.100.108"
+    },
+    {
+      "proxy": "http://152.32.132.190:7890",
+      "latency_ms": 336.0,
+      "https_ok": true,
+      "exit_ip": "152.32.132.190"
+    },
+    {
+      "proxy": "http://132.243.234.171:9443",
+      "latency_ms": 382.4,
+      "https_ok": true,
+      "exit_ip": "132.243.234.171"
+    },
+    {
+      "proxy": "http://43.160.249.13:9223",
+      "latency_ms": 389.0,
+      "https_ok": true,
+      "exit_ip": "202.56.174.117"
+    },
+    {
+      "proxy": "http://62.90.70.144:7443",
+      "latency_ms": 403.4,
+      "https_ok": true,
+      "exit_ip": "62.90.70.144"
+    },
+    {
+      "proxy": "http://202.28.194.139:31280",
+      "latency_ms": 432.7,
+      "https_ok": true,
+      "exit_ip": "202.28.194.139"
+    },
+    {
+      "proxy": "http://185.200.188.234:10001",
+      "latency_ms": 465.9,
+      "https_ok": true,
+      "exit_ip": "185.200.188.234"
     },
     {
       "proxy": "http://113.160.132.26:8080",
-      "latency_ms": 1716.8,
+      "latency_ms": 530.3,
       "https_ok": true,
       "exit_ip": "113.160.132.26"
     },
     {
-      "proxy": "http://51.178.253.98:80",
-      "latency_ms": 1805.6,
+      "proxy": "http://103.82.20.76:8080",
+      "latency_ms": 565.5,
       "https_ok": true,
-      "exit_ip": "2001:41d0:404:100::2c5c"
+      "exit_ip": "116.105.76.7"
     },
     {
-      "proxy": "http://213.207.198.254:8080",
-      "latency_ms": 2787.2,
+      "proxy": "http://217.217.249.12:3128",
+      "latency_ms": 568.4,
+      "https_ok": true,
+      "exit_ip": "217.217.249.12"
+    },
+    {
+      "proxy": "http://177.93.49.171:8888",
+      "latency_ms": 1965.8,
       "https_ok": false,
-      "exit_ip": "213.207.198.254"
+      "exit_ip": "186.190.226.191"
+    },
+    {
+      "proxy": "http://45.174.168.45:999",
+      "latency_ms": 2168.7,
+      "https_ok": false,
+      "exit_ip": "148.244.84.116"
+    },
+    {
+      "proxy": "http://180.148.25.42:8181",
+      "latency_ms": 2510.9,
+      "https_ok": false,
+      "exit_ip": "180.148.25.42"
+    },
+    {
+      "proxy": "http://47.79.254.162:8888",
+      "latency_ms": 2682.3,
+      "https_ok": false,
+      "exit_ip": "47.79.254.162"
+    },
+    {
+      "proxy": "http://64.204.90.177:999",
+      "latency_ms": 3218.4,
+      "https_ok": false,
+      "exit_ip": "64.204.90.181"
     }
   ],
   "sample_errors": [],
