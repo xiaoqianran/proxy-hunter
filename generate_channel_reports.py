@@ -301,7 +301,7 @@ def report_overview():
         "## 目录结构",
         "",
         "```",
-        "proxy-test/",
+        "proxy-hunter/",
         "├── geonode_hunt.py      # 推荐：深度搜寻",
         "├── quick_hunt.py        # 快速搜寻",
         "├── final_verify.py      # 真实站点验证",
