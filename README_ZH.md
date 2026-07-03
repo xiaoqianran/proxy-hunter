@@ -111,6 +111,28 @@ v3 关键优化：HTTP 命中后同一 Session 立刻测 HTTPS；Linux 下启用
 
 ---
 
+## 作为 Python 依赖（供爬虫等项目）
+
+v0.3+ 提供可安装包 `proxy_hunter`：
+
+```bash
+pip install -e /path/to/proxy-hunter
+# 或 uv: proxy-hunter = { path = "../proxy-hunter", editable = true }
+```
+
+```python
+from proxy_hunter import load_pool_from_results
+
+pool = load_pool_from_results()  # 默认读 source_tests/results/
+proxy_url = pool.acquire()         # 轮询取代理
+# ... aiohttp.get(url, proxy=proxy_url) ...
+pool.report(proxy_url, success=True)
+```
+
+详见 [moltbook-crawler](../moltbook-crawler) 的 `--proxy` 集成示例。
+
+---
+
 ## 在代码中使用
 
 从 `source_tests/results/{platform}.json` 读取可用代理：
