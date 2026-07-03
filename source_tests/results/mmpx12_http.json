@@ -3,79 +3,19 @@
   "platform": "mmpx12/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
-  "tested_at": "2026-07-03 15:17:26 UTC",
-  "fetch_ok": true,
-  "fetch_error": null,
-  "fetch_ms": 10.6,
-  "total_fetched": 440,
-  "total_tested": 50,
-  "working": 10,
-  "https_working": 3,
-  "success_rate": 20.0,
-  "avg_latency_ms": 3863.3,
-  "median_latency_ms": 4571.4,
-  "working_proxies": [
-    {
-      "proxy": "http://79.110.192.44:8081",
-      "latency_ms": 333.6,
-      "https_ok": false,
-      "exit_ip": "79.110.192.44"
-    },
-    {
-      "proxy": "http://197.221.240.176:80",
-      "latency_ms": 691.8,
-      "https_ok": false,
-      "exit_ip": "41.220.17.62"
-    },
-    {
-      "proxy": "http://41.220.22.7:80",
-      "latency_ms": 2784.8,
-      "https_ok": false,
-      "exit_ip": "41.220.17.62"
-    },
-    {
-      "proxy": "http://206.135.55.224:999",
-      "latency_ms": 2900.2,
-      "https_ok": true,
-      "exit_ip": "94.125.136.249"
-    },
-    {
-      "proxy": "http://12.50.107.217:80",
-      "latency_ms": 4364.6,
-      "https_ok": false,
-      "exit_ip": "12.50.107.220"
-    },
-    {
-      "proxy": "http://197.221.237.248:80",
-      "latency_ms": 4778.2,
-      "https_ok": false,
-      "exit_ip": "41.220.17.62"
-    },
-    {
-      "proxy": "http://43.133.187.166:3128",
-      "latency_ms": 4868.1,
-      "https_ok": true,
-      "exit_ip": "43.133.187.166"
-    },
-    {
-      "proxy": "http://103.153.149.62:8038",
-      "latency_ms": 4889.5,
-      "https_ok": false,
-      "exit_ip": "163.61.225.54"
-    },
-    {
-      "proxy": "http://200.8.200.191:8088",
-      "latency_ms": 5227.6,
-      "https_ok": true,
-      "exit_ip": "200.8.200.191"
-    },
-    {
-      "proxy": "http://103.157.79.154:1818",
-      "latency_ms": 7795.0,
-      "https_ok": false,
-      "exit_ip": "103.157.79.154"
-    }
-  ],
+  "tested_at": "2026-07-03 15:45:06 UTC",
+  "fetch_ok": false,
+  "fetch_error": "HTTP 404",
+  "fetch_ms": 94.6,
+  "validate_ms": null,
+  "total_fetched": 0,
+  "total_tested": 0,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
   "sample_errors": [],
   "config": {
     "id": "mmpx12_http",
@@ -87,5 +27,13 @@
     "update_frequency": "不定期",
     "notes": "高质量备选",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

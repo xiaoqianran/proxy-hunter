@@ -30,3 +30,4 @@ Thumbs.db
 
 # Runtime / local overrides (keep committed results/ as samples)
 results/*.log
+source_tests/.cache/

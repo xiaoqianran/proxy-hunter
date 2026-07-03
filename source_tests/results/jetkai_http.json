@@ -3,23 +3,24 @@
   "platform": "jetkai/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt",
-  "tested_at": "2026-07-03 15:16:08 UTC",
+  "tested_at": "2026-07-03 15:45:00 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 10.5,
+  "fetch_ms": 99.4,
+  "validate_ms": 9399.0,
   "total_fetched": 1801,
   "total_tested": 50,
   "working": 1,
   "https_working": 0,
   "success_rate": 2.0,
-  "avg_latency_ms": 5656.3,
-  "median_latency_ms": 5656.3,
+  "avg_latency_ms": 6246.2,
+  "median_latency_ms": 6246.2,
   "working_proxies": [
     {
-      "proxy": "http://118.163.120.181:58837",
-      "latency_ms": 5656.3,
+      "proxy": "http://45.70.236.194:999",
+      "latency_ms": 6246.2,
       "https_ok": false,
-      "exit_ip": "118.163.120.181"
+      "exit_ip": "45.70.236.194"
     }
   ],
   "sample_errors": [],
@@ -33,5 +34,13 @@
     "update_frequency": "每小时",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

@@ -3,53 +3,36 @@
   "platform": "vakhov/fresh-proxy-list",
   "protocol_label": "SOCKS5",
   "url": "https://vakhov.github.io/fresh-proxy-list/socks5.txt",
-  "tested_at": "2026-07-03 15:23:10 UTC",
+  "tested_at": "2026-07-03 15:45:44 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 105.6,
+  "fetch_ms": 133.5,
+  "validate_ms": 3773.6,
   "total_fetched": 21,
   "total_tested": 21,
-  "working": 6,
-  "https_working": 4,
-  "success_rate": 28.6,
-  "avg_latency_ms": 2985.2,
-  "median_latency_ms": 1397.2,
+  "working": 3,
+  "https_working": 3,
+  "success_rate": 14.3,
+  "avg_latency_ms": 594.2,
+  "median_latency_ms": 592.6,
   "working_proxies": [
     {
-      "proxy": "socks5://5.255.113.177:1080",
-      "latency_ms": 578.1,
-      "https_ok": true,
-      "exit_ip": "5.255.113.177"
-    },
-    {
       "proxy": "socks5://5.255.117.127:1080",
-      "latency_ms": 596.7,
+      "latency_ms": 589.3,
       "https_ok": true,
       "exit_ip": "5.255.117.127"
     },
     {
       "proxy": "socks5://5.255.117.250:1080",
-      "latency_ms": 611.1,
+      "latency_ms": 592.6,
       "https_ok": true,
       "exit_ip": "5.255.117.250"
     },
     {
-      "proxy": "socks5://121.169.46.116:1090",
-      "latency_ms": 2183.3,
+      "proxy": "socks5://5.255.113.177:1080",
+      "latency_ms": 600.7,
       "https_ok": true,
-      "exit_ip": "121.169.46.116"
-    },
-    {
-      "proxy": "socks5://203.25.208.163:1145",
-      "latency_ms": 6563.3,
-      "https_ok": false,
-      "exit_ip": "203.25.208.163"
-    },
-    {
-      "proxy": "socks5://203.25.208.163:1100",
-      "latency_ms": 7378.7,
-      "https_ok": false,
-      "exit_ip": "203.25.208.163"
+      "exit_ip": "5.255.113.177"
     }
   ],
   "sample_errors": [],
@@ -63,5 +46,13 @@
     "update_frequency": "持续更新",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

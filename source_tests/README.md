@@ -7,18 +7,15 @@
 ```
 source_tests/
 ├── bootstrap_sources.py   # 生成 sources/*.json（39 个平台）
-├── common.py              # 共用验证逻辑
+├── common.py              # 共用拉取 + 验证逻辑
 ├── run_one.py             # 测试单个平台
-├── run_all.py             # 顺序测试全部平台
+├── run_all.py             # 并行测试全部平台
+├── .cache/                # 列表缓存（1h TTL，git 忽略）
 ├── sources/               # 每个平台一个 JSON 配置
-│   ├── monosans_http.json
-│   ├── proxifly_http.json
-│   └── ...
 └── results/               # 每个平台独立输出
-    ├── 00_RANKING.md      # 总排名（仅汇总，不混合代理池）
-    ├── monosans_http.md
-    ├── monosans_http.json
-    └── ...
+    ├── 00_RANKING.md      # 总排名
+    ├── {source_id}.md
+    └── {source_id}.json
 ```
 
 ## 用法
@@ -32,16 +29,46 @@ python bootstrap_sources.py
 # 2. 测试单个平台
 python run_one.py proxifly_http
 
-# 3. 测试全部（约 30–60 分钟，39 平台 × 50 抽样）
+# 3. 测试全部（优化后约 3–8 分钟，视网络而定）
 python run_all.py
+
+# 4. 断点续跑：跳过 1 小时内已有结果
+python run_all.py --skip-existing
+
+# 5. 只测指定平台
+python run_all.py --only vakhov_http,proxyscrape_api_http
 ```
+
+## CLI 参数
+
+| 参数 | 默认 | 说明 |
+|------|------|------|
+| `--workers` | 4 | 同时跑几个平台 |
+| `--concurrency` | 40 | 每平台验证并发数 |
+| `--timeout` | 6 | 单次请求超时（秒） |
+| `--max-test` | 50 | 每平台抽样上限 |
+| `--skip-existing` | off | 跳过 1h 内新鲜结果 |
+| `--no-cache` | off | 忽略 `.cache/`，强制重新拉列表 |
+| `--no-https` | off | 跳过 HTTPS 检测（更快） |
+| `--only` | — | 逗号分隔的 source id |
+
+`run_one.py` 支持 `--concurrency`、`--timeout`、`--max-test`、`--no-cache`、`--no-https`。
+
+## 性能优化（v2）
+
+相比初版顺序执行（~10 分钟 / 39 平台）：
+
+1. **共享 HTTP Session** — 每平台一个 `aiohttp.ClientSession`，不再每个代理新建连接
+2. **平台级并行** — `--workers 4` 同时测 4 个来源
+3. **列表缓存** — `.cache/{id}.txt` 1 小时 TTL，避免重复拉 GitHub/CDN
+4. **HTTPS 二阶段** — 仅对 HTTP 通过的代理再测 HTTPS
+5. **更短超时** — 6s 总超时 / 3s 连接超时，失败代理快速淘汰
 
 ## 测试规则
 
 - 验证端点：`icanhazip.com`（不用 httpbin）
-- 每平台最多抽测 **50** 个（列表更大时随机抽样，保证公平对比）
-- 25 并发，8 秒超时
-- HTTP 通过后再测 HTTPS
+- 每平台最多抽测 **50** 个（列表更大时随机抽样）
+- HTTP 通过后再测 HTTPS（可用 `--no-https` 关闭）
 
 ## 平台列表（39 个）
 

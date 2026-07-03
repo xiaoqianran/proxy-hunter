@@ -3,95 +3,96 @@
   "platform": "monosans/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
-  "tested_at": "2026-07-03 15:17:44 UTC",
+  "tested_at": "2026-07-03 15:45:06 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 12.9,
+  "fetch_ms": 12.8,
+  "validate_ms": 9985.9,
   "total_fetched": 31,
   "total_tested": 31,
   "working": 13,
   "https_working": 9,
   "success_rate": 41.9,
-  "avg_latency_ms": 3064.9,
-  "median_latency_ms": 1602.4,
+  "avg_latency_ms": 2142.5,
+  "median_latency_ms": 1300.1,
   "working_proxies": [
     {
       "proxy": "http://43.167.187.233:3128",
-      "latency_ms": 221.0,
+      "latency_ms": 226.2,
       "https_ok": true,
       "exit_ip": "43.167.187.233"
     },
     {
-      "proxy": "http://176.111.37.5:39811",
-      "latency_ms": 366.3,
-      "https_ok": true,
-      "exit_ip": "176.111.37.5"
-    },
-    {
       "proxy": "http://176.111.37.216:39811",
-      "latency_ms": 372.6,
+      "latency_ms": 329.3,
       "https_ok": true,
       "exit_ip": "176.111.37.216"
     },
     {
-      "proxy": "http://202.28.194.139:31280",
-      "latency_ms": 439.0,
+      "proxy": "http://176.111.37.5:39811",
+      "latency_ms": 335.3,
       "https_ok": true,
-      "exit_ip": "202.28.194.139"
+      "exit_ip": "176.111.37.5"
     },
     {
       "proxy": "http://173.212.246.157:3128",
-      "latency_ms": 1285.7,
+      "latency_ms": 400.1,
       "https_ok": true,
       "exit_ip": "173.212.246.157"
     },
     {
-      "proxy": "http://112.28.149.152:8443",
-      "latency_ms": 1578.6,
-      "https_ok": true,
-      "exit_ip": "212.87.194.7"
-    },
-    {
-      "proxy": "http://112.28.149.156:8443",
-      "latency_ms": 1602.4,
-      "https_ok": true,
-      "exit_ip": "212.87.194.24"
-    },
-    {
-      "proxy": "http://192.188.80.38:3128",
-      "latency_ms": 1991.9,
-      "https_ok": false,
-      "exit_ip": "192.188.80.38"
-    },
-    {
       "proxy": "http://43.133.169.167:3128",
-      "latency_ms": 4647.3,
+      "latency_ms": 428.3,
       "https_ok": true,
       "exit_ip": "43.133.169.167"
     },
     {
+      "proxy": "http://202.28.194.139:31280",
+      "latency_ms": 433.6,
+      "https_ok": true,
+      "exit_ip": "202.28.194.139"
+    },
+    {
+      "proxy": "http://112.28.149.152:8443",
+      "latency_ms": 1300.1,
+      "https_ok": true,
+      "exit_ip": "212.87.194.7"
+    },
+    {
+      "proxy": "http://192.188.80.38:3128",
+      "latency_ms": 2331.4,
+      "https_ok": true,
+      "exit_ip": "192.188.80.38"
+    },
+    {
+      "proxy": "http://38.156.233.172:999",
+      "latency_ms": 2776.0,
+      "https_ok": false,
+      "exit_ip": "38.156.233.174"
+    },
+    {
+      "proxy": "http://104.250.138.236:3128",
+      "latency_ms": 3613.2,
+      "https_ok": false,
+      "exit_ip": "179.43.133.50"
+    },
+    {
+      "proxy": "http://95.215.161.153:8080",
+      "latency_ms": 3811.5,
+      "https_ok": false,
+      "exit_ip": "95.215.161.153"
+    },
+    {
       "proxy": "http://2.78.60.10:3129",
-      "latency_ms": 6313.9,
+      "latency_ms": 5399.1,
       "https_ok": false,
       "exit_ip": "2.78.60.10"
     },
     {
-      "proxy": "http://185.181.209.34:8080",
-      "latency_ms": 6456.2,
-      "https_ok": false,
-      "exit_ip": "185.181.209.34"
-    },
-    {
-      "proxy": "http://38.156.233.172:999",
-      "latency_ms": 7228.9,
+      "proxy": "http://112.28.149.156:8443",
+      "latency_ms": 6467.9,
       "https_ok": true,
-      "exit_ip": "38.156.233.174"
-    },
-    {
-      "proxy": "http://45.174.168.38:999",
-      "latency_ms": 7339.8,
-      "https_ok": false,
-      "exit_ip": "148.224.96.16"
+      "exit_ip": "212.87.194.24"
     }
   ],
   "sample_errors": [],
@@ -105,5 +106,13 @@
     "update_frequency": "每小时",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

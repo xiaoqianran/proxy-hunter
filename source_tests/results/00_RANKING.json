@@ -1,18 +1,20 @@
 {
-  "elapsed_s": 634.8,
+  "elapsed_s": 67.6,
   "summaries": [
     {
       "id": "ErcinDedeoglu_http",
       "platform": "ErcinDedeoglu/proxies",
       "protocol": "HTTP",
       "fetch_ok": true,
-      "fetched": 25277,
+      "fetched": 25275,
       "tested": 50,
       "working": 20,
       "success_rate": 40.0,
       "https_working": 0,
-      "median_latency_ms": 11.1,
-      "error": null
+      "median_latency_ms": 18.6,
+      "validate_ms": 9154.5,
+      "error": null,
+      "elapsed_s": 9.2
     },
     {
       "id": "ShiftyTR_http",
@@ -24,8 +26,10 @@
       "working": 2,
       "success_rate": 5.0,
       "https_working": 0,
-      "median_latency_ms": 298.4,
-      "error": null
+      "median_latency_ms": 299.4,
+      "validate_ms": 3641.4,
+      "error": null,
+      "elapsed_s": 3.7
     },
     {
       "id": "TheSpeedX_http",
@@ -34,11 +38,13 @@
       "fetch_ok": true,
       "fetched": 2710,
       "tested": 50,
-      "working": 8,
-      "success_rate": 16.0,
-      "https_working": 1,
-      "median_latency_ms": 2269.4,
-      "error": null
+      "working": 7,
+      "success_rate": 14.0,
+      "https_working": 0,
+      "median_latency_ms": 2320.8,
+      "validate_ms": 10449.9,
+      "error": null,
+      "elapsed_s": 10.6
     },
     {
       "id": "TheSpeedX_socks4",
@@ -47,11 +53,13 @@
       "fetch_ok": true,
       "fetched": 2354,
       "tested": 50,
-      "working": 7,
-      "success_rate": 14.0,
-      "https_working": 1,
-      "median_latency_ms": 3223.8,
-      "error": null
+      "working": 10,
+      "success_rate": 20.0,
+      "https_working": 0,
+      "median_latency_ms": 3288.0,
+      "validate_ms": 6519.2,
+      "error": null,
+      "elapsed_s": 6.6
     },
     {
       "id": "TheSpeedX_socks5",
@@ -60,50 +68,58 @@
       "fetch_ok": true,
       "fetched": 2288,
       "tested": 50,
-      "working": 15,
-      "success_rate": 30.0,
-      "https_working": 0,
-      "median_latency_ms": 5630.5,
-      "error": null
+      "working": 5,
+      "success_rate": 10.0,
+      "https_working": 2,
+      "median_latency_ms": 604.8,
+      "validate_ms": 6298.4,
+      "error": null,
+      "elapsed_s": 6.4
     },
     {
       "id": "databay_http",
       "platform": "databay-labs/free-proxy-list",
       "protocol": "HTTP",
       "fetch_ok": true,
-      "fetched": 1933,
+      "fetched": 1879,
       "tested": 50,
-      "working": 18,
-      "success_rate": 36.0,
-      "https_working": 7,
-      "median_latency_ms": 3851.1,
-      "error": null
+      "working": 4,
+      "success_rate": 8.0,
+      "https_working": 1,
+      "median_latency_ms": 4769.9,
+      "validate_ms": 9821.3,
+      "error": null,
+      "elapsed_s": 10.0
     },
     {
       "id": "databay_socks5",
       "platform": "databay-labs/free-proxy-list",
       "protocol": "SOCKS5",
       "fetch_ok": true,
-      "fetched": 371,
+      "fetched": 366,
       "tested": 50,
-      "working": 14,
-      "success_rate": 28.0,
-      "https_working": 12,
-      "median_latency_ms": 979.4,
-      "error": null
+      "working": 20,
+      "success_rate": 40.0,
+      "https_working": 11,
+      "median_latency_ms": 975.9,
+      "validate_ms": 9740.6,
+      "error": null,
+      "elapsed_s": 9.8
     },
     {
       "id": "hookzof_socks5",
       "platform": "hookzof/socks5_list",
       "protocol": "SOCKS5",
       "fetch_ok": true,
-      "fetched": 539,
+      "fetched": 593,
       "tested": 50,
-      "working": 22,
-      "success_rate": 44.0,
-      "https_working": 9,
-      "median_latency_ms": 631.9,
-      "error": null
+      "working": 15,
+      "success_rate": 30.0,
+      "https_working": 7,
+      "median_latency_ms": 624.6,
+      "validate_ms": 6941.9,
+      "error": null,
+      "elapsed_s": 7.0
     },
     {
       "id": "iplocate_http",
@@ -112,11 +128,13 @@
       "fetch_ok": true,
       "fetched": 546,
       "tested": 50,
-      "working": 18,
-      "success_rate": 36.0,
-      "https_working": 4,
-      "median_latency_ms": 1317.2,
-      "error": null
+      "working": 16,
+      "success_rate": 32.0,
+      "https_working": 3,
+      "median_latency_ms": 737.4,
+      "validate_ms": 9882.1,
+      "error": null,
+      "elapsed_s": 10.0
     },
     {
       "id": "iplocate_socks5",
@@ -125,11 +143,13 @@
       "fetch_ok": true,
       "fetched": 994,
       "tested": 50,
-      "working": 20,
-      "success_rate": 40.0,
-      "https_working": 7,
-      "median_latency_ms": 4311.1,
-      "error": null
+      "working": 10,
+      "success_rate": 20.0,
+      "https_working": 5,
+      "median_latency_ms": 644.2,
+      "validate_ms": 6802.4,
+      "error": null,
+      "elapsed_s": 6.9
     },
     {
       "id": "jetkai_http",
@@ -141,8 +161,10 @@
       "working": 1,
       "success_rate": 2.0,
       "https_working": 0,
-      "median_latency_ms": 5656.3,
-      "error": null
+      "median_latency_ms": 6246.2,
+      "validate_ms": 9399.0,
+      "error": null,
+      "elapsed_s": 9.5
     },
     {
       "id": "jetkai_https",
@@ -151,11 +173,13 @@
       "fetch_ok": true,
       "fetched": 2161,
       "tested": 50,
-      "working": 2,
-      "success_rate": 4.0,
+      "working": 1,
+      "success_rate": 2.0,
       "https_working": 0,
-      "median_latency_ms": 4842.9,
-      "error": null
+      "median_latency_ms": 352.1,
+      "validate_ms": 3747.5,
+      "error": null,
+      "elapsed_s": 3.8
     },
     {
       "id": "jetkai_socks4",
@@ -164,11 +188,13 @@
       "fetch_ok": true,
       "fetched": 1603,
       "tested": 50,
-      "working": 4,
-      "success_rate": 8.0,
-      "https_working": 1,
-      "median_latency_ms": 416.6,
-      "error": null
+      "working": 1,
+      "success_rate": 2.0,
+      "https_working": 0,
+      "median_latency_ms": 390.0,
+      "validate_ms": 4013.9,
+      "error": null,
+      "elapsed_s": 4.2
     },
     {
       "id": "jetkai_socks5",
@@ -177,24 +203,28 @@
       "fetch_ok": true,
       "fetched": 405,
       "tested": 50,
-      "working": 11,
-      "success_rate": 22.0,
+      "working": 8,
+      "success_rate": 16.0,
       "https_working": 0,
-      "median_latency_ms": 626.4,
-      "error": null
+      "median_latency_ms": 555.0,
+      "validate_ms": 5225.2,
+      "error": null,
+      "elapsed_s": 5.3
     },
     {
       "id": "mmpx12_http",
       "platform": "mmpx12/proxy-list",
       "protocol": "HTTP",
-      "fetch_ok": true,
-      "fetched": 440,
-      "tested": 50,
-      "working": 10,
-      "success_rate": 20.0,
-      "https_working": 3,
-      "median_latency_ms": 4571.4,
-      "error": null
+      "fetch_ok": false,
+      "fetched": 0,
+      "tested": 0,
+      "working": 0,
+      "success_rate": 0.0,
+      "https_working": 0,
+      "median_latency_ms": null,
+      "validate_ms": null,
+      "error": "HTTP 404",
+      "elapsed_s": 0.1
     },
     {
       "id": "monosans_http",
@@ -206,8 +236,10 @@
       "working": 13,
       "success_rate": 41.9,
       "https_working": 9,
-      "median_latency_ms": 1602.4,
-      "error": null
+      "median_latency_ms": 1300.1,
+      "validate_ms": 9985.9,
+      "error": null,
+      "elapsed_s": 10.0
     },
     {
       "id": "monosans_http_anonymous",
@@ -220,7 +252,9 @@
       "success_rate": 0.0,
       "https_working": 0,
       "median_latency_ms": null,
-      "error": "HTTP 404"
+      "validate_ms": null,
+      "error": "HTTP 404",
+      "elapsed_s": 0.1
     },
     {
       "id": "openproxylist_https",
@@ -229,11 +263,13 @@
       "fetch_ok": true,
       "fetched": 124,
       "tested": 50,
-      "working": 13,
-      "success_rate": 26.0,
-      "https_working": 2,
-      "median_latency_ms": 6101.5,
-      "error": null
+      "working": 3,
+      "success_rate": 6.0,
+      "https_working": 1,
+      "median_latency_ms": 1785.0,
+      "validate_ms": 9605.9,
+      "error": null,
+      "elapsed_s": 9.7
     },
     {
       "id": "openproxylist_socks4",
@@ -242,11 +278,13 @@
       "fetch_ok": true,
       "fetched": 150,
       "tested": 50,
-      "working": 12,
-      "success_rate": 24.0,
-      "https_working": 5,
-      "median_latency_ms": 1770.8,
-      "error": null
+      "working": 1,
+      "success_rate": 2.0,
+      "https_working": 0,
+      "median_latency_ms": 406.2,
+      "validate_ms": 8413.2,
+      "error": null,
+      "elapsed_s": 8.5
     },
     {
       "id": "openproxylist_socks5",
@@ -255,11 +293,13 @@
       "fetch_ok": true,
       "fetched": 9,
       "tested": 9,
-      "working": 0,
-      "success_rate": 0.0,
-      "https_working": 0,
-      "median_latency_ms": null,
-      "error": null
+      "working": 1,
+      "success_rate": 11.1,
+      "https_working": 1,
+      "median_latency_ms": 839.6,
+      "validate_ms": 4415.4,
+      "error": null,
+      "elapsed_s": 4.5
     },
     {
       "id": "proxifly_all",
@@ -268,11 +308,13 @@
       "fetch_ok": true,
       "fetched": 3700,
       "tested": 50,
-      "working": 9,
-      "success_rate": 18.0,
-      "https_working": 3,
-      "median_latency_ms": 106.6,
-      "error": null
+      "working": 13,
+      "success_rate": 26.0,
+      "https_working": 1,
+      "median_latency_ms": 494.1,
+      "validate_ms": 9679.7,
+      "error": null,
+      "elapsed_s": 9.7
     },
     {
       "id": "proxifly_http",
@@ -281,11 +323,13 @@
       "fetch_ok": true,
       "fetched": 1235,
       "tested": 50,
-      "working": 21,
-      "success_rate": 42.0,
-      "https_working": 0,
-      "median_latency_ms": 14.3,
-      "error": null
+      "working": 13,
+      "success_rate": 26.0,
+      "https_working": 1,
+      "median_latency_ms": 14.1,
+      "validate_ms": 9973.6,
+      "error": null,
+      "elapsed_s": 10.0
     },
     {
       "id": "proxifly_https",
@@ -294,11 +338,13 @@
       "fetch_ok": true,
       "fetched": 1155,
       "tested": 50,
-      "working": 0,
-      "success_rate": 0.0,
+      "working": 1,
+      "success_rate": 2.0,
       "https_working": 0,
-      "median_latency_ms": null,
-      "error": null
+      "median_latency_ms": 509.2,
+      "validate_ms": 5731.5,
+      "error": null,
+      "elapsed_s": 5.8
     },
     {
       "id": "proxifly_socks4",
@@ -307,11 +353,13 @@
       "fetch_ok": true,
       "fetched": 771,
       "tested": 50,
-      "working": 17,
-      "success_rate": 34.0,
-      "https_working": 1,
-      "median_latency_ms": 476.1,
-      "error": null
+      "working": 9,
+      "success_rate": 18.0,
+      "https_working": 0,
+      "median_latency_ms": 393.3,
+      "validate_ms": 3816.6,
+      "error": null,
+      "elapsed_s": 3.8
     },
     {
       "id": "proxifly_socks5",
@@ -320,11 +368,13 @@
       "fetch_ok": true,
       "fetched": 539,
       "tested": 50,
-      "working": 21,
-      "success_rate": 42.0,
-      "https_working": 9,
-      "median_latency_ms": 633.0,
-      "error": null
+      "working": 11,
+      "success_rate": 22.0,
+      "https_working": 2,
+      "median_latency_ms": 623.7,
+      "validate_ms": 5846.4,
+      "error": null,
+      "elapsed_s": 5.9
     },
     {
       "id": "proxylist_to_http",
@@ -333,11 +383,13 @@
       "fetch_ok": true,
       "fetched": 750,
       "tested": 50,
-      "working": 5,
-      "success_rate": 10.0,
-      "https_working": 1,
-      "median_latency_ms": 4163.4,
-      "error": null
+      "working": 6,
+      "success_rate": 12.0,
+      "https_working": 0,
+      "median_latency_ms": 4235.4,
+      "validate_ms": 8813.2,
+      "error": null,
+      "elapsed_s": 8.9
     },
     {
       "id": "proxylist_to_socks4",
@@ -346,11 +398,13 @@
       "fetch_ok": true,
       "fetched": 261,
       "tested": 50,
-      "working": 12,
-      "success_rate": 24.0,
-      "https_working": 0,
-      "median_latency_ms": 4205.1,
-      "error": null
+      "working": 7,
+      "success_rate": 14.0,
+      "https_working": 1,
+      "median_latency_ms": 1362.0,
+      "validate_ms": 7026.3,
+      "error": null,
+      "elapsed_s": 7.1
     },
     {
       "id": "proxylist_to_socks5",
@@ -359,50 +413,58 @@
       "fetch_ok": true,
       "fetched": 196,
       "tested": 50,
-      "working": 15,
-      "success_rate": 30.0,
+      "working": 0,
+      "success_rate": 0.0,
       "https_working": 0,
-      "median_latency_ms": 7329.2,
-      "error": null
+      "median_latency_ms": null,
+      "validate_ms": 5975.4,
+      "error": null,
+      "elapsed_s": 6.1
     },
     {
       "id": "proxyscrape_api_http",
       "platform": "ProxyScrape API v4",
       "protocol": "HTTP Elite",
       "fetch_ok": true,
-      "fetched": 122,
+      "fetched": 147,
       "tested": 50,
-      "working": 34,
-      "success_rate": 68.0,
-      "https_working": 9,
-      "median_latency_ms": 1614.3,
-      "error": null
+      "working": 28,
+      "success_rate": 56.0,
+      "https_working": 10,
+      "median_latency_ms": 566.0,
+      "validate_ms": 10191.3,
+      "error": null,
+      "elapsed_s": 10.2
     },
     {
       "id": "proxyscrape_api_socks4",
       "platform": "ProxyScrape API v4",
       "protocol": "SOCKS4 Elite",
       "fetch_ok": true,
-      "fetched": 149,
+      "fetched": 153,
       "tested": 50,
-      "working": 26,
-      "success_rate": 52.0,
-      "https_working": 12,
-      "median_latency_ms": 1017.2,
-      "error": null
+      "working": 13,
+      "success_rate": 26.0,
+      "https_working": 4,
+      "median_latency_ms": 629.1,
+      "validate_ms": 11515.9,
+      "error": null,
+      "elapsed_s": 11.8
     },
     {
       "id": "proxyscrape_api_socks5",
       "platform": "ProxyScrape API v4",
       "protocol": "SOCKS5 Elite",
       "fetch_ok": true,
-      "fetched": 557,
+      "fetched": 600,
       "tested": 50,
-      "working": 29,
-      "success_rate": 58.0,
-      "https_working": 10,
-      "median_latency_ms": 1363.0,
-      "error": null
+      "working": 19,
+      "success_rate": 38.0,
+      "https_working": 5,
+      "median_latency_ms": 814.7,
+      "validate_ms": 9769.7,
+      "error": null,
+      "elapsed_s": 10.1
     },
     {
       "id": "proxyscrape_mirror_http",
@@ -415,7 +477,9 @@
       "success_rate": 0.0,
       "https_working": 0,
       "median_latency_ms": null,
-      "error": "HTTP 404"
+      "validate_ms": null,
+      "error": "HTTP 404",
+      "elapsed_s": 0.1
     },
     {
       "id": "prxchk_http",
@@ -424,11 +488,13 @@
       "fetch_ok": true,
       "fetched": 58,
       "tested": 50,
-      "working": 0,
-      "success_rate": 0.0,
+      "working": 1,
+      "success_rate": 2.0,
       "https_working": 0,
-      "median_latency_ms": null,
-      "error": null
+      "median_latency_ms": 3029.7,
+      "validate_ms": 6281.1,
+      "error": null,
+      "elapsed_s": 6.3
     },
     {
       "id": "prxchk_socks4",
@@ -441,7 +507,9 @@
       "success_rate": 0.0,
       "https_working": 0,
       "median_latency_ms": null,
-      "error": null
+      "validate_ms": 3008.2,
+      "error": null,
+      "elapsed_s": 3.0
     },
     {
       "id": "prxchk_socks5",
@@ -454,20 +522,24 @@
       "success_rate": 0.0,
       "https_working": 0,
       "median_latency_ms": null,
-      "error": null
+      "validate_ms": 3003.6,
+      "error": null,
+      "elapsed_s": 3.0
     },
     {
       "id": "vakhov_http",
       "platform": "vakhov/fresh-proxy-list",
       "protocol": "HTTP",
       "fetch_ok": true,
-      "fetched": 528,
+      "fetched": 524,
       "tested": 50,
       "working": 28,
       "success_rate": 56.0,
       "https_working": 0,
-      "median_latency_ms": 10.2,
-      "error": null
+      "median_latency_ms": 14.9,
+      "validate_ms": 9412.3,
+      "error": null,
+      "elapsed_s": 9.5
     },
     {
       "id": "vakhov_https",
@@ -480,20 +552,24 @@
       "success_rate": 0.0,
       "https_working": 0,
       "median_latency_ms": null,
-      "error": null
+      "validate_ms": 3002.9,
+      "error": null,
+      "elapsed_s": 3.1
     },
     {
       "id": "vakhov_socks4",
       "platform": "vakhov/fresh-proxy-list",
       "protocol": "SOCKS4",
       "fetch_ok": true,
-      "fetched": 168,
+      "fetched": 165,
       "tested": 50,
-      "working": 43,
-      "success_rate": 86.0,
-      "https_working": 1,
-      "median_latency_ms": 392.0,
-      "error": null
+      "working": 26,
+      "success_rate": 52.0,
+      "https_working": 0,
+      "median_latency_ms": 516.0,
+      "validate_ms": 6023.4,
+      "error": null,
+      "elapsed_s": 6.1
     },
     {
       "id": "vakhov_socks5",
@@ -502,11 +578,21 @@
       "fetch_ok": true,
       "fetched": 21,
       "tested": 21,
-      "working": 6,
-      "success_rate": 28.6,
-      "https_working": 4,
-      "median_latency_ms": 1397.2,
-      "error": null
+      "working": 3,
+      "success_rate": 14.3,
+      "https_working": 3,
+      "median_latency_ms": 592.6,
+      "validate_ms": 3773.6,
+      "error": null,
+      "elapsed_s": 3.9
     }
-  ]
+  ],
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
+  }
 }

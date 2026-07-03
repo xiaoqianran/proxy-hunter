@@ -3,95 +3,36 @@
   "platform": "roosterkid/openproxylist",
   "protocol_label": "HTTPS",
   "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
-  "tested_at": "2026-07-03 15:18:00 UTC",
+  "tested_at": "2026-07-03 15:45:07 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 7.7,
+  "fetch_ms": 132.3,
+  "validate_ms": 9605.9,
   "total_fetched": 124,
   "total_tested": 50,
-  "working": 13,
-  "https_working": 2,
-  "success_rate": 26.0,
-  "avg_latency_ms": 5116.5,
-  "median_latency_ms": 6101.5,
+  "working": 3,
+  "https_working": 1,
+  "success_rate": 6.0,
+  "avg_latency_ms": 1878.7,
+  "median_latency_ms": 1785.0,
   "working_proxies": [
     {
-      "proxy": "http://8.219.97.248:80",
-      "latency_ms": 357.0,
+      "proxy": "http://190.7.138.78:80",
+      "latency_ms": 426.8,
       "https_ok": false,
-      "exit_ip": "8.219.64.236"
+      "exit_ip": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//E"
     },
     {
-      "proxy": "http://45.174.168.2:999",
-      "latency_ms": 1348.8,
-      "https_ok": false,
-      "exit_ip": "148.224.90.15"
-    },
-    {
-      "proxy": "http://203.150.172.151:8080",
-      "latency_ms": 1578.1,
-      "https_ok": false,
-      "exit_ip": "203.150.172.151"
-    },
-    {
-      "proxy": "http://103.31.133.102:8080",
-      "latency_ms": 3025.3,
-      "https_ok": false,
-      "exit_ip": "103.31.133.102"
-    },
-    {
-      "proxy": "http://38.156.233.74:999",
-      "latency_ms": 4204.5,
-      "https_ok": false,
-      "exit_ip": "38.156.233.74"
-    },
-    {
-      "proxy": "http://85.117.56.85:8080",
-      "latency_ms": 4527.2,
-      "https_ok": false,
-      "exit_ip": "85.117.56.38"
-    },
-    {
-      "proxy": "http://177.130.104.86:33333",
-      "latency_ms": 6101.5,
-      "https_ok": false,
-      "exit_ip": "177.130.104.86"
-    },
-    {
-      "proxy": "http://138.68.3.159:3128",
-      "latency_ms": 6499.9,
+      "proxy": "http://110.34.1.180:32650",
+      "latency_ms": 1785.0,
       "https_ok": true,
-      "exit_ip": "138.68.3.159"
+      "exit_ip": "110.34.1.180"
     },
     {
-      "proxy": "http://103.154.92.74:8080",
-      "latency_ms": 6805.4,
+      "proxy": "http://195.87.182.10:9090",
+      "latency_ms": 3424.4,
       "https_ok": false,
-      "exit_ip": "103.154.92.74"
-    },
-    {
-      "proxy": "http://85.117.56.147:8080",
-      "latency_ms": 7626.8,
-      "https_ok": true,
-      "exit_ip": "85.117.56.147"
-    },
-    {
-      "proxy": "http://154.73.28.49:8080",
-      "latency_ms": 7732.6,
-      "https_ok": false,
-      "exit_ip": "154.73.28.72"
-    },
-    {
-      "proxy": "http://119.82.242.200:8080",
-      "latency_ms": 7916.5,
-      "https_ok": false,
-      "exit_ip": "119.82.242.200"
-    },
-    {
-      "proxy": "http://203.142.71.50:8080",
-      "latency_ms": 8790.4,
-      "https_ok": false,
-      "exit_ip": "203.142.69.67"
+      "exit_ip": "62.244.206.114"
     }
   ],
   "sample_errors": [],
@@ -105,5 +46,13 @@
     "update_frequency": "每分钟",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

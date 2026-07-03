@@ -3,18 +3,26 @@
   "platform": "proxifly/free-proxy-list",
   "protocol_label": "HTTPS",
   "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/https/data.txt",
-  "tested_at": "2026-07-03 15:19:28 UTC",
+  "tested_at": "2026-07-03 15:45:17 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 18.5,
+  "fetch_ms": 23.6,
+  "validate_ms": 5731.5,
   "total_fetched": 1155,
   "total_tested": 50,
-  "working": 0,
+  "working": 1,
   "https_working": 0,
-  "success_rate": 0.0,
-  "avg_latency_ms": null,
-  "median_latency_ms": null,
-  "working_proxies": [],
+  "success_rate": 2.0,
+  "avg_latency_ms": 509.2,
+  "median_latency_ms": 509.2,
+  "working_proxies": [
+    {
+      "proxy": "http://98.130.11.240:9090",
+      "latency_ms": 509.2,
+      "https_ok": false,
+      "exit_ip": "98.130.11.240"
+    }
+  ],
   "sample_errors": [],
   "config": {
     "id": "proxifly_https",
@@ -26,5 +34,13 @@
     "update_frequency": "每5分钟",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

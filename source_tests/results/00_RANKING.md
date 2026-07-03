@@ -1,55 +1,56 @@
 # 各平台代理可用度排名（独立测试）
 
-- **测试时间**: 2026-07-03 15:23:26 UTC
+- **测试时间**: 2026-07-03 15:45:50 UTC
 - **平台数量**: 39
 - **每平台抽样**: 最多 50 个
+- **并发**: 40 | **超时**: 6.0s
 - **验证端点**: icanhazip.com
-- **总耗时**: 634.8s
+- **总耗时**: 67.6s
 
 ## 排名（按成功率 → 可用数）
 
-| 排名 | Source ID | 平台 | 协议 | 拉取 | 测试 | 可用 | 成功率 | HTTPS | 中位延迟 |
-|------|-----------|------|------|------|------|------|--------|-------|----------|
-| 1 | `vakhov_socks4` | vakhov/fresh-proxy-list | SOCKS4 | 168 | 50 | 43 | **86.0%** | 1 | 392.0 |
-| 2 | `proxyscrape_api_http` | ProxyScrape API v4 | HTTP Elite | 122 | 50 | 34 | **68.0%** | 9 | 1614.3 |
-| 3 | `proxyscrape_api_socks5` | ProxyScrape API v4 | SOCKS5 Elite | 557 | 50 | 29 | **58.0%** | 10 | 1363.0 |
-| 4 | `vakhov_http` | vakhov/fresh-proxy-list | HTTP | 528 | 50 | 28 | **56.0%** | 0 | 10.2 |
-| 5 | `proxyscrape_api_socks4` | ProxyScrape API v4 | SOCKS4 Elite | 149 | 50 | 26 | **52.0%** | 12 | 1017.2 |
-| 6 | `hookzof_socks5` | hookzof/socks5_list | SOCKS5 | 539 | 50 | 22 | **44.0%** | 9 | 631.9 |
-| 7 | `proxifly_http` | proxifly/free-proxy-list | HTTP | 1235 | 50 | 21 | **42.0%** | 0 | 14.3 |
-| 8 | `proxifly_socks5` | proxifly/free-proxy-list | SOCKS5 | 539 | 50 | 21 | **42.0%** | 9 | 633.0 |
-| 9 | `monosans_http` | monosans/proxy-list | HTTP | 31 | 31 | 13 | **41.9%** | 9 | 1602.4 |
-| 10 | `ErcinDedeoglu_http` | ErcinDedeoglu/proxies | HTTP | 25277 | 50 | 20 | **40.0%** | 0 | 11.1 |
-| 11 | `iplocate_socks5` | iplocate/free-proxy-list | SOCKS5 | 994 | 50 | 20 | **40.0%** | 7 | 4311.1 |
-| 12 | `iplocate_http` | iplocate/free-proxy-list | HTTP | 546 | 50 | 18 | **36.0%** | 4 | 1317.2 |
-| 13 | `databay_http` | databay-labs/free-proxy-list | HTTP | 1933 | 50 | 18 | **36.0%** | 7 | 3851.1 |
-| 14 | `proxifly_socks4` | proxifly/free-proxy-list | SOCKS4 | 771 | 50 | 17 | **34.0%** | 1 | 476.1 |
-| 15 | `TheSpeedX_socks5` | TheSpeedX/PROXY-List | SOCKS5 | 2288 | 50 | 15 | **30.0%** | 0 | 5630.5 |
-| 16 | `proxylist_to_socks5` | proxylist-to/proxy-list | SOCKS5 | 196 | 50 | 15 | **30.0%** | 0 | 7329.2 |
-| 17 | `vakhov_socks5` | vakhov/fresh-proxy-list | SOCKS5 | 21 | 21 | 6 | **28.6%** | 4 | 1397.2 |
-| 18 | `databay_socks5` | databay-labs/free-proxy-list | SOCKS5 | 371 | 50 | 14 | **28.0%** | 12 | 979.4 |
-| 19 | `openproxylist_https` | roosterkid/openproxylist | HTTPS | 124 | 50 | 13 | **26.0%** | 2 | 6101.5 |
-| 20 | `openproxylist_socks4` | roosterkid/openproxylist | SOCKS4 | 150 | 50 | 12 | **24.0%** | 5 | 1770.8 |
-| 21 | `proxylist_to_socks4` | proxylist-to/proxy-list | SOCKS4 | 261 | 50 | 12 | **24.0%** | 0 | 4205.1 |
-| 22 | `jetkai_socks5` | jetkai/proxy-list | SOCKS5 | 405 | 50 | 11 | **22.0%** | 0 | 626.4 |
-| 23 | `mmpx12_http` | mmpx12/proxy-list | HTTP | 440 | 50 | 10 | **20.0%** | 3 | 4571.4 |
-| 24 | `proxifly_all` | proxifly/free-proxy-list | ALL | 3700 | 50 | 9 | **18.0%** | 3 | 106.6 |
-| 25 | `TheSpeedX_http` | TheSpeedX/PROXY-List | HTTP | 2710 | 50 | 8 | **16.0%** | 1 | 2269.4 |
-| 26 | `TheSpeedX_socks4` | TheSpeedX/PROXY-List | SOCKS4 | 2354 | 50 | 7 | **14.0%** | 1 | 3223.8 |
-| 27 | `proxylist_to_http` | proxylist-to/proxy-list | HTTP | 750 | 50 | 5 | **10.0%** | 1 | 4163.4 |
-| 28 | `jetkai_socks4` | jetkai/proxy-list | SOCKS4 | 1603 | 50 | 4 | **8.0%** | 1 | 416.6 |
-| 29 | `ShiftyTR_http` | ShiftyTR/Proxy-List | HTTP | 40 | 40 | 2 | **5.0%** | 0 | 298.4 |
-| 30 | `jetkai_https` | jetkai/proxy-list | HTTPS | 2161 | 50 | 2 | **4.0%** | 0 | 4842.9 |
-| 31 | `jetkai_http` | jetkai/proxy-list | HTTP | 1801 | 50 | 1 | **2.0%** | 0 | 5656.3 |
-| 32 | `openproxylist_socks5` | roosterkid/openproxylist | SOCKS5 | 9 | 9 | 0 | **0.0%** | 0 | — |
-| 33 | `proxifly_https` | proxifly/free-proxy-list | HTTPS | 1155 | 50 | 0 | **0.0%** | 0 | — |
-| 34 | `prxchk_http` | prxchk/proxy-list | HTTP | 58 | 50 | 0 | **0.0%** | 0 | — |
-| 35 | `prxchk_socks4` | prxchk/proxy-list | SOCKS4 | 32 | 32 | 0 | **0.0%** | 0 | — |
-| 36 | `prxchk_socks5` | prxchk/proxy-list | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | — |
-| 37 | `vakhov_https` | vakhov/fresh-proxy-list | HTTPS | 6 | 6 | 0 | **0.0%** | 0 | — |
+| 排名 | Source ID | 平台 | 协议 | 拉取 | 测试 | 可用 | 成功率 | HTTPS | 验证耗时 | 中位延迟 |
+|------|-----------|------|------|------|------|------|--------|-------|----------|----------|
+| 1 | `vakhov_http` | vakhov/fresh-proxy-list | HTTP | 524 | 50 | 28 | **56.0%** | 0 | 9412.3ms | 14.9 |
+| 2 | `proxyscrape_api_http` | ProxyScrape API v4 | HTTP Elite | 147 | 50 | 28 | **56.0%** | 10 | 10191.3ms | 566.0 |
+| 3 | `vakhov_socks4` | vakhov/fresh-proxy-list | SOCKS4 | 165 | 50 | 26 | **52.0%** | 0 | 6023.4ms | 516.0 |
+| 4 | `monosans_http` | monosans/proxy-list | HTTP | 31 | 31 | 13 | **41.9%** | 9 | 9985.9ms | 1300.1 |
+| 5 | `ErcinDedeoglu_http` | ErcinDedeoglu/proxies | HTTP | 25275 | 50 | 20 | **40.0%** | 0 | 9154.5ms | 18.6 |
+| 6 | `databay_socks5` | databay-labs/free-proxy-list | SOCKS5 | 366 | 50 | 20 | **40.0%** | 11 | 9740.6ms | 975.9 |
+| 7 | `proxyscrape_api_socks5` | ProxyScrape API v4 | SOCKS5 Elite | 600 | 50 | 19 | **38.0%** | 5 | 9769.7ms | 814.7 |
+| 8 | `iplocate_http` | iplocate/free-proxy-list | HTTP | 546 | 50 | 16 | **32.0%** | 3 | 9882.1ms | 737.4 |
+| 9 | `hookzof_socks5` | hookzof/socks5_list | SOCKS5 | 593 | 50 | 15 | **30.0%** | 7 | 6941.9ms | 624.6 |
+| 10 | `proxifly_http` | proxifly/free-proxy-list | HTTP | 1235 | 50 | 13 | **26.0%** | 1 | 9973.6ms | 14.1 |
+| 11 | `proxifly_all` | proxifly/free-proxy-list | ALL | 3700 | 50 | 13 | **26.0%** | 1 | 9679.7ms | 494.1 |
+| 12 | `proxyscrape_api_socks4` | ProxyScrape API v4 | SOCKS4 Elite | 153 | 50 | 13 | **26.0%** | 4 | 11515.9ms | 629.1 |
+| 13 | `proxifly_socks5` | proxifly/free-proxy-list | SOCKS5 | 539 | 50 | 11 | **22.0%** | 2 | 5846.4ms | 623.7 |
+| 14 | `iplocate_socks5` | iplocate/free-proxy-list | SOCKS5 | 994 | 50 | 10 | **20.0%** | 5 | 6802.4ms | 644.2 |
+| 15 | `TheSpeedX_socks4` | TheSpeedX/PROXY-List | SOCKS4 | 2354 | 50 | 10 | **20.0%** | 0 | 6519.2ms | 3288.0 |
+| 16 | `proxifly_socks4` | proxifly/free-proxy-list | SOCKS4 | 771 | 50 | 9 | **18.0%** | 0 | 3816.6ms | 393.3 |
+| 17 | `jetkai_socks5` | jetkai/proxy-list | SOCKS5 | 405 | 50 | 8 | **16.0%** | 0 | 5225.2ms | 555.0 |
+| 18 | `vakhov_socks5` | vakhov/fresh-proxy-list | SOCKS5 | 21 | 21 | 3 | **14.3%** | 3 | 3773.6ms | 592.6 |
+| 19 | `proxylist_to_socks4` | proxylist-to/proxy-list | SOCKS4 | 261 | 50 | 7 | **14.0%** | 1 | 7026.3ms | 1362.0 |
+| 20 | `TheSpeedX_http` | TheSpeedX/PROXY-List | HTTP | 2710 | 50 | 7 | **14.0%** | 0 | 10449.9ms | 2320.8 |
+| 21 | `proxylist_to_http` | proxylist-to/proxy-list | HTTP | 750 | 50 | 6 | **12.0%** | 0 | 8813.2ms | 4235.4 |
+| 22 | `openproxylist_socks5` | roosterkid/openproxylist | SOCKS5 | 9 | 9 | 1 | **11.1%** | 1 | 4415.4ms | 839.6 |
+| 23 | `TheSpeedX_socks5` | TheSpeedX/PROXY-List | SOCKS5 | 2288 | 50 | 5 | **10.0%** | 2 | 6298.4ms | 604.8 |
+| 24 | `databay_http` | databay-labs/free-proxy-list | HTTP | 1879 | 50 | 4 | **8.0%** | 1 | 9821.3ms | 4769.9 |
+| 25 | `openproxylist_https` | roosterkid/openproxylist | HTTPS | 124 | 50 | 3 | **6.0%** | 1 | 9605.9ms | 1785.0 |
+| 26 | `ShiftyTR_http` | ShiftyTR/Proxy-List | HTTP | 40 | 40 | 2 | **5.0%** | 0 | 3641.4ms | 299.4 |
+| 27 | `jetkai_https` | jetkai/proxy-list | HTTPS | 2161 | 50 | 1 | **2.0%** | 0 | 3747.5ms | 352.1 |
+| 28 | `jetkai_socks4` | jetkai/proxy-list | SOCKS4 | 1603 | 50 | 1 | **2.0%** | 0 | 4013.9ms | 390.0 |
+| 29 | `openproxylist_socks4` | roosterkid/openproxylist | SOCKS4 | 150 | 50 | 1 | **2.0%** | 0 | 8413.2ms | 406.2 |
+| 30 | `proxifly_https` | proxifly/free-proxy-list | HTTPS | 1155 | 50 | 1 | **2.0%** | 0 | 5731.5ms | 509.2 |
+| 31 | `prxchk_http` | prxchk/proxy-list | HTTP | 58 | 50 | 1 | **2.0%** | 0 | 6281.1ms | 3029.7 |
+| 32 | `jetkai_http` | jetkai/proxy-list | HTTP | 1801 | 50 | 1 | **2.0%** | 0 | 9399.0ms | 6246.2 |
+| 33 | `proxylist_to_socks5` | proxylist-to/proxy-list | SOCKS5 | 196 | 50 | 0 | **0.0%** | 0 | 5975.4ms | — |
+| 34 | `prxchk_socks4` | prxchk/proxy-list | SOCKS4 | 32 | 32 | 0 | **0.0%** | 0 | 3008.2ms | — |
+| 35 | `prxchk_socks5` | prxchk/proxy-list | SOCKS5 | 10 | 10 | 0 | **0.0%** | 0 | 3003.6ms | — |
+| 36 | `vakhov_https` | vakhov/fresh-proxy-list | HTTPS | 6 | 6 | 0 | **0.0%** | 0 | 3002.9ms | — |
 
 ## 拉取失败
 
+- `mmpx12_http`: HTTP 404
 - `monosans_http_anonymous`: HTTP 404
 - `proxyscrape_mirror_http`: HTTP 404
 

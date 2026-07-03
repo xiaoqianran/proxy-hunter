@@ -3,10 +3,11 @@
   "platform": "prxchk/proxy-list",
   "protocol_label": "SOCKS5",
   "url": "https://raw.githubusercontent.com/prxchk/proxy-list/main/socks5.txt",
-  "tested_at": "2026-07-03 15:22:33 UTC",
+  "tested_at": "2026-07-03 15:45:39 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 8.9,
+  "fetch_ms": 14.2,
+  "validate_ms": 3003.6,
   "total_fetched": 10,
   "total_tested": 10,
   "working": 0,
@@ -26,5 +27,13 @@
     "update_frequency": "不定期",
     "notes": "",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

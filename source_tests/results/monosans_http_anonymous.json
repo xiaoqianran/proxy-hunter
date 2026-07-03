@@ -3,10 +3,11 @@
   "platform": "monosans/proxy-list",
   "protocol_label": "HTTP Anonymous",
   "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies_anonymous/http.txt",
-  "tested_at": "2026-07-03 15:18:00 UTC",
+  "tested_at": "2026-07-03 15:45:07 UTC",
   "fetch_ok": false,
   "fetch_error": "HTTP 404",
-  "fetch_ms": 112.4,
+  "fetch_ms": 105.9,
+  "validate_ms": null,
   "total_fetched": 0,
   "total_tested": 0,
   "working": 0,
@@ -26,5 +27,13 @@
     "update_frequency": "每小时",
     "notes": "匿名分组",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }

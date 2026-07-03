@@ -3,47 +3,54 @@
   "platform": "proxylist-to/proxy-list",
   "protocol_label": "HTTP",
   "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt",
-  "tested_at": "2026-07-03 15:19:59 UTC",
+  "tested_at": "2026-07-03 15:45:23 UTC",
   "fetch_ok": true,
   "fetch_error": null,
-  "fetch_ms": 11.0,
+  "fetch_ms": 114.1,
+  "validate_ms": 8813.2,
   "total_fetched": 750,
   "total_tested": 50,
-  "working": 5,
-  "https_working": 1,
-  "success_rate": 10.0,
-  "avg_latency_ms": 3450.7,
-  "median_latency_ms": 4163.4,
+  "working": 6,
+  "https_working": 0,
+  "success_rate": 12.0,
+  "avg_latency_ms": 3299.6,
+  "median_latency_ms": 4235.4,
   "working_proxies": [
     {
-      "proxy": "http://46.35.9.110:80",
-      "latency_ms": 294.5,
+      "proxy": "http://95.66.138.21:8880",
+      "latency_ms": 452.8,
       "https_ok": false,
-      "exit_ip": "46.35.9.110"
+      "exit_ip": "95.66.138.21"
     },
     {
-      "proxy": "http://60.205.132.71:80",
-      "latency_ms": 342.9,
+      "proxy": "http://139.255.74.125:8080",
+      "latency_ms": 678.5,
       "https_ok": false,
-      "exit_ip": "<!doctype html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>"
+      "exit_ip": "139.255.74.125"
     },
     {
-      "proxy": "http://47.252.1.180:8080",
-      "latency_ms": 4163.4,
-      "https_ok": false,
-      "exit_ip": ""
-    },
-    {
-      "proxy": "http://139.196.214.238:1234",
-      "latency_ms": 4629.3,
+      "proxy": "http://96.126.118.190:801",
+      "latency_ms": 4089.7,
       "https_ok": false,
       "exit_ip": ""
     },
     {
-      "proxy": "http://154.72.67.190:8080",
-      "latency_ms": 7823.2,
-      "https_ok": true,
-      "exit_ip": "154.72.67.190"
+      "proxy": "http://115.29.140.201:8499",
+      "latency_ms": 4381.2,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "http://124.70.221.252:3128",
+      "latency_ms": 4609.0,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "http://115.29.148.215:8181",
+      "latency_ms": 5586.4,
+      "https_ok": false,
+      "exit_ip": ""
     }
   ],
   "sample_errors": [],
@@ -57,5 +64,13 @@
     "update_frequency": "不定期",
     "notes": "补充源",
     "max_test": 50
+  },
+  "settings": {
+    "timeout": 6.0,
+    "connect_timeout": 3.0,
+    "concurrency": 40,
+    "max_test": 50,
+    "check_https": true,
+    "https_only_for_hits": true
   }
 }
