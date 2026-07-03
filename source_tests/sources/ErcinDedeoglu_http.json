@@ -1,0 +1,11 @@
+{
+  "id": "ErcinDedeoglu_http",
+  "platform": "ErcinDedeoglu/proxies",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/ErcinDedeoglu/proxies/main/proxies/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "高质量备选",
+  "max_test": 50
+}

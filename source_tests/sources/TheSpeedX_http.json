@@ -1,0 +1,11 @@
+{
+  "id": "TheSpeedX_http",
+  "platform": "TheSpeedX/PROXY-List",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每日",
+  "notes": "体量大",
+  "max_test": 50
+}

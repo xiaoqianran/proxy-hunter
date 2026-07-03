@@ -1,0 +1,11 @@
+{
+  "id": "jetkai_socks4",
+  "platform": "jetkai/proxy-list",
+  "protocol_label": "SOCKS4",
+  "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt",
+  "scheme": "socks4",
+  "format": "txt",
+  "update_frequency": "每小时",
+  "notes": "",
+  "max_test": 50
+}

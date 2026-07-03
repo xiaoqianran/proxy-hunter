@@ -1,0 +1,11 @@
+{
+  "id": "proxylist_to_socks5",
+  "platform": "proxylist-to/proxy-list",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks5.txt",
+  "scheme": "socks5",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "",
+  "max_test": 50
+}

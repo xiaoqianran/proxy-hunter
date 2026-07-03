@@ -1,0 +1,11 @@
+{
+  "id": "hookzof_socks5",
+  "platform": "hookzof/socks5_list",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
+  "scheme": "socks5",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "仅 SOCKS5",
+  "max_test": 50
+}

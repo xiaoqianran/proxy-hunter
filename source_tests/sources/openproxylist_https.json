@@ -1,0 +1,11 @@
+{
+  "id": "openproxylist_https",
+  "platform": "roosterkid/openproxylist",
+  "protocol_label": "HTTPS",
+  "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每分钟",
+  "notes": "",
+  "max_test": 50
+}

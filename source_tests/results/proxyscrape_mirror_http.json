@@ -1,0 +1,30 @@
+{
+  "source_id": "proxyscrape_mirror_http",
+  "platform": "proxyscrape/free-proxy-list",
+  "protocol_label": "HTTP Mirror",
+  "url": "https://raw.githubusercontent.com/proxyscrape/free-proxy-list/main/proxies/http.txt",
+  "tested_at": "2026-07-03 15:21:57 UTC",
+  "fetch_ok": false,
+  "fetch_error": "HTTP 404",
+  "fetch_ms": 112.2,
+  "total_fetched": 0,
+  "total_tested": 0,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
+  "sample_errors": [],
+  "config": {
+    "id": "proxyscrape_mirror_http",
+    "platform": "proxyscrape/free-proxy-list",
+    "protocol_label": "HTTP Mirror",
+    "url": "https://raw.githubusercontent.com/proxyscrape/free-proxy-list/main/proxies/http.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "定期",
+    "notes": "GitHub mirror",
+    "max_test": 50
+  }
+}

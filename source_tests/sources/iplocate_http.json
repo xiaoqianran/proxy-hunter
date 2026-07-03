@@ -1,0 +1,11 @@
+{
+  "id": "iplocate_http",
+  "platform": "iplocate/free-proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/iplocate/free-proxy-list/main/protocols/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每30分钟",
+  "notes": "",
+  "max_test": 50
+}

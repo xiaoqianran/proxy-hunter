@@ -1,0 +1,97 @@
+{
+  "source_id": "jetkai_socks5",
+  "platform": "jetkai/proxy-list",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+  "tested_at": "2026-07-03 15:17:08 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 114.9,
+  "total_fetched": 405,
+  "total_tested": 50,
+  "working": 11,
+  "https_working": 0,
+  "success_rate": 22.0,
+  "avg_latency_ms": 492.2,
+  "median_latency_ms": 626.4,
+  "working_proxies": [
+    {
+      "proxy": "socks5://199.116.114.11:4145",
+      "latency_ms": 123.5,
+      "https_ok": false,
+      "exit_ip": "199.116.114.11"
+    },
+    {
+      "proxy": "socks5://104.37.135.145:4145",
+      "latency_ms": 128.1,
+      "https_ok": false,
+      "exit_ip": "104.37.135.145"
+    },
+    {
+      "proxy": "socks5://142.54.236.97:4145",
+      "latency_ms": 128.3,
+      "https_ok": false,
+      "exit_ip": "142.54.236.97"
+    },
+    {
+      "proxy": "socks5://184.170.245.148:4145",
+      "latency_ms": 496.1,
+      "https_ok": false,
+      "exit_ip": "184.170.245.148"
+    },
+    {
+      "proxy": "socks5://74.119.147.209:4145",
+      "latency_ms": 502.3,
+      "https_ok": false,
+      "exit_ip": "74.119.147.209"
+    },
+    {
+      "proxy": "socks5://174.77.111.196:4145",
+      "latency_ms": 626.4,
+      "https_ok": false,
+      "exit_ip": "174.77.111.196"
+    },
+    {
+      "proxy": "socks5://184.178.172.28:15294",
+      "latency_ms": 626.9,
+      "https_ok": false,
+      "exit_ip": "184.178.172.28"
+    },
+    {
+      "proxy": "socks5://184.178.172.23:4145",
+      "latency_ms": 627.2,
+      "https_ok": false,
+      "exit_ip": "184.178.172.23"
+    },
+    {
+      "proxy": "socks5://98.181.137.83:4145",
+      "latency_ms": 627.8,
+      "https_ok": false,
+      "exit_ip": "98.181.137.83"
+    },
+    {
+      "proxy": "socks5://98.175.31.195:4145",
+      "latency_ms": 628.6,
+      "https_ok": false,
+      "exit_ip": "98.175.31.195"
+    },
+    {
+      "proxy": "socks5://113.160.188.21:1080",
+      "latency_ms": 898.5,
+      "https_ok": false,
+      "exit_ip": "113.168.48.123"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "jetkai_socks5",
+    "platform": "jetkai/proxy-list",
+    "protocol_label": "SOCKS5",
+    "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+    "scheme": "socks5",
+    "format": "txt",
+    "update_frequency": "每小时",
+    "notes": "",
+    "max_test": 50
+  }
+}

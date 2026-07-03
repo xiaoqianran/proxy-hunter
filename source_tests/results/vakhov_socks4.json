@@ -1,0 +1,289 @@
+{
+  "source_id": "vakhov_socks4",
+  "platform": "vakhov/fresh-proxy-list",
+  "protocol_label": "SOCKS4",
+  "url": "https://vakhov.github.io/fresh-proxy-list/socks4.txt",
+  "tested_at": "2026-07-03 15:23:00 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 115.3,
+  "total_fetched": 168,
+  "total_tested": 50,
+  "working": 43,
+  "https_working": 1,
+  "success_rate": 86.0,
+  "avg_latency_ms": 395.6,
+  "median_latency_ms": 392.0,
+  "working_proxies": [
+    {
+      "proxy": "socks4://107.181.161.81:4145",
+      "latency_ms": 90.4,
+      "https_ok": false,
+      "exit_ip": "107.181.161.81"
+    },
+    {
+      "proxy": "socks4://72.37.217.3:4145",
+      "latency_ms": 94.1,
+      "https_ok": false,
+      "exit_ip": "72.37.217.3"
+    },
+    {
+      "proxy": "socks4://192.111.134.10:4145",
+      "latency_ms": 95.4,
+      "https_ok": false,
+      "exit_ip": "192.111.134.10"
+    },
+    {
+      "proxy": "socks4://142.54.229.249:4145",
+      "latency_ms": 95.9,
+      "https_ok": false,
+      "exit_ip": "142.54.229.249"
+    },
+    {
+      "proxy": "socks4://192.252.220.92:17328",
+      "latency_ms": 96.1,
+      "https_ok": false,
+      "exit_ip": "192.252.220.92"
+    },
+    {
+      "proxy": "socks4://72.37.216.68:4145",
+      "latency_ms": 98.0,
+      "https_ok": false,
+      "exit_ip": "72.37.216.68"
+    },
+    {
+      "proxy": "socks4://142.54.236.97:4145",
+      "latency_ms": 101.2,
+      "https_ok": false,
+      "exit_ip": "142.54.236.97"
+    },
+    {
+      "proxy": "socks4://67.201.59.70:4145",
+      "latency_ms": 101.6,
+      "https_ok": false,
+      "exit_ip": "67.201.59.70"
+    },
+    {
+      "proxy": "socks4://107.181.168.145:4145",
+      "latency_ms": 107.5,
+      "https_ok": false,
+      "exit_ip": "107.181.168.145"
+    },
+    {
+      "proxy": "socks4://68.71.241.33:4145",
+      "latency_ms": 112.9,
+      "https_ok": false,
+      "exit_ip": "68.71.241.33"
+    },
+    {
+      "proxy": "socks4://68.71.249.153:48606",
+      "latency_ms": 114.0,
+      "https_ok": false,
+      "exit_ip": "68.71.249.153"
+    },
+    {
+      "proxy": "socks4://206.220.175.2:4145",
+      "latency_ms": 122.8,
+      "https_ok": false,
+      "exit_ip": "206.220.175.2"
+    },
+    {
+      "proxy": "socks4://184.170.251.30:11288",
+      "latency_ms": 378.5,
+      "https_ok": false,
+      "exit_ip": "184.170.251.30"
+    },
+    {
+      "proxy": "socks4://192.252.215.2:4145",
+      "latency_ms": 382.7,
+      "https_ok": false,
+      "exit_ip": "192.252.215.2"
+    },
+    {
+      "proxy": "socks4://192.111.135.17:18302",
+      "latency_ms": 384.4,
+      "https_ok": false,
+      "exit_ip": "192.111.135.17"
+    },
+    {
+      "proxy": "socks4://199.58.184.97:4145",
+      "latency_ms": 388.0,
+      "https_ok": false,
+      "exit_ip": "199.58.184.97"
+    },
+    {
+      "proxy": "socks4://192.111.137.35:4145",
+      "latency_ms": 389.7,
+      "https_ok": false,
+      "exit_ip": "192.111.137.35"
+    },
+    {
+      "proxy": "socks4://192.111.137.34:18765",
+      "latency_ms": 390.2,
+      "https_ok": false,
+      "exit_ip": "192.111.137.34"
+    },
+    {
+      "proxy": "socks4://192.111.130.5:17002",
+      "latency_ms": 390.5,
+      "https_ok": false,
+      "exit_ip": "192.111.130.5"
+    },
+    {
+      "proxy": "socks4://192.252.214.17:4145",
+      "latency_ms": 391.5,
+      "https_ok": false,
+      "exit_ip": "192.252.214.17"
+    },
+    {
+      "proxy": "socks4://192.252.216.86:4145",
+      "latency_ms": 391.9,
+      "https_ok": false,
+      "exit_ip": "192.252.216.86"
+    },
+    {
+      "proxy": "socks4://192.252.210.233:4145",
+      "latency_ms": 392.0,
+      "https_ok": false,
+      "exit_ip": "192.252.210.233"
+    },
+    {
+      "proxy": "socks4://192.252.216.81:4145",
+      "latency_ms": 392.3,
+      "https_ok": false,
+      "exit_ip": "192.252.216.81"
+    },
+    {
+      "proxy": "socks4://184.170.245.148:4145",
+      "latency_ms": 392.9,
+      "https_ok": false,
+      "exit_ip": "184.170.245.148"
+    },
+    {
+      "proxy": "socks4://192.111.139.163:19404",
+      "latency_ms": 393.3,
+      "https_ok": false,
+      "exit_ip": "192.111.139.163"
+    },
+    {
+      "proxy": "socks4://192.111.139.162:4145",
+      "latency_ms": 394.1,
+      "https_ok": false,
+      "exit_ip": "192.111.139.162"
+    },
+    {
+      "proxy": "socks4://199.229.254.129:4145",
+      "latency_ms": 397.0,
+      "https_ok": false,
+      "exit_ip": "199.229.254.129"
+    },
+    {
+      "proxy": "socks4://184.170.249.65:4145",
+      "latency_ms": 428.6,
+      "https_ok": false,
+      "exit_ip": "184.170.249.65"
+    },
+    {
+      "proxy": "socks4://184.178.172.25:15291",
+      "latency_ms": 501.8,
+      "https_ok": false,
+      "exit_ip": "184.178.172.25"
+    },
+    {
+      "proxy": "socks4://184.181.178.33:4145",
+      "latency_ms": 503.5,
+      "https_ok": false,
+      "exit_ip": "70.166.167.45"
+    },
+    {
+      "proxy": "socks4://184.178.172.5:15303",
+      "latency_ms": 503.8,
+      "https_ok": false,
+      "exit_ip": "184.178.172.5"
+    },
+    {
+      "proxy": "socks4://72.223.188.67:4145",
+      "latency_ms": 503.9,
+      "https_ok": false,
+      "exit_ip": "72.223.188.67"
+    },
+    {
+      "proxy": "socks4://98.181.137.80:4145",
+      "latency_ms": 504.7,
+      "https_ok": false,
+      "exit_ip": "98.181.137.80"
+    },
+    {
+      "proxy": "socks4://72.206.74.126:4145",
+      "latency_ms": 506.1,
+      "https_ok": false,
+      "exit_ip": "72.206.74.126"
+    },
+    {
+      "proxy": "socks4://174.75.211.222:4145",
+      "latency_ms": 507.1,
+      "https_ok": false,
+      "exit_ip": "174.75.211.222"
+    },
+    {
+      "proxy": "socks4://98.175.31.195:4145",
+      "latency_ms": 508.0,
+      "https_ok": false,
+      "exit_ip": "98.175.31.195"
+    },
+    {
+      "proxy": "socks4://70.166.167.38:57728",
+      "latency_ms": 513.2,
+      "https_ok": false,
+      "exit_ip": "70.166.167.38"
+    },
+    {
+      "proxy": "socks4://184.178.172.5:15303",
+      "latency_ms": 516.7,
+      "https_ok": false,
+      "exit_ip": "184.178.172.5"
+    },
+    {
+      "proxy": "socks4://184.178.172.17:4145",
+      "latency_ms": 518.1,
+      "https_ok": false,
+      "exit_ip": "184.178.172.17"
+    },
+    {
+      "proxy": "socks4://98.191.0.37:4145",
+      "latency_ms": 519.2,
+      "https_ok": false,
+      "exit_ip": "98.191.0.37"
+    },
+    {
+      "proxy": "socks4://193.243.154.146:4145",
+      "latency_ms": 601.9,
+      "https_ok": true,
+      "exit_ip": "193.243.154.146"
+    },
+    {
+      "proxy": "socks4://169.239.236.201:10801",
+      "latency_ms": 1028.7,
+      "https_ok": false,
+      "exit_ip": "169.239.236.201"
+    },
+    {
+      "proxy": "socks4://69.61.200.104:36181",
+      "latency_ms": 1764.6,
+      "https_ok": false,
+      "exit_ip": "69.61.200.104"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "vakhov_socks4",
+    "platform": "vakhov/fresh-proxy-list",
+    "protocol_label": "SOCKS4",
+    "url": "https://vakhov.github.io/fresh-proxy-list/socks4.txt",
+    "scheme": "socks4",
+    "format": "txt",
+    "update_frequency": "持续更新",
+    "notes": "",
+    "max_test": 50
+  }
+}

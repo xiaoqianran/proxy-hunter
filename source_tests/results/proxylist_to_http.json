@@ -1,0 +1,61 @@
+{
+  "source_id": "proxylist_to_http",
+  "platform": "proxylist-to/proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt",
+  "tested_at": "2026-07-03 15:19:59 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 11.0,
+  "total_fetched": 750,
+  "total_tested": 50,
+  "working": 5,
+  "https_working": 1,
+  "success_rate": 10.0,
+  "avg_latency_ms": 3450.7,
+  "median_latency_ms": 4163.4,
+  "working_proxies": [
+    {
+      "proxy": "http://46.35.9.110:80",
+      "latency_ms": 294.5,
+      "https_ok": false,
+      "exit_ip": "46.35.9.110"
+    },
+    {
+      "proxy": "http://60.205.132.71:80",
+      "latency_ms": 342.9,
+      "https_ok": false,
+      "exit_ip": "<!doctype html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>"
+    },
+    {
+      "proxy": "http://47.252.1.180:8080",
+      "latency_ms": 4163.4,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "http://139.196.214.238:1234",
+      "latency_ms": 4629.3,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "http://154.72.67.190:8080",
+      "latency_ms": 7823.2,
+      "https_ok": true,
+      "exit_ip": "154.72.67.190"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "proxylist_to_http",
+    "platform": "proxylist-to/proxy-list",
+    "protocol_label": "HTTP",
+    "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "不定期",
+    "notes": "补充源",
+    "max_test": 50
+  }
+}

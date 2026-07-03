@@ -1,0 +1,11 @@
+{
+  "id": "ShiftyTR_http",
+  "platform": "ShiftyTR/Proxy-List",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "",
+  "max_test": 50
+}

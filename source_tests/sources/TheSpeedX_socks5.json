@@ -1,0 +1,11 @@
+{
+  "id": "TheSpeedX_socks5",
+  "platform": "TheSpeedX/PROXY-List",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+  "scheme": "socks5",
+  "format": "txt",
+  "update_frequency": "每日",
+  "notes": "",
+  "max_test": 50
+}

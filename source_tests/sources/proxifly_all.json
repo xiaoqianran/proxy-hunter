@@ -1,0 +1,11 @@
+{
+  "id": "proxifly_all",
+  "platform": "proxifly/free-proxy-list",
+  "protocol_label": "ALL",
+  "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/all/data.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每5分钟",
+  "notes": "CDN 最优入口",
+  "max_test": 50
+}

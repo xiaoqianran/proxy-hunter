@@ -1,0 +1,11 @@
+{
+  "id": "jetkai_http",
+  "platform": "jetkai/proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每小时",
+  "notes": "",
+  "max_test": 50
+}

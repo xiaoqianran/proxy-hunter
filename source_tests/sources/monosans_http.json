@@ -1,0 +1,11 @@
+{
+  "id": "monosans_http",
+  "platform": "monosans/proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每小时",
+  "notes": "",
+  "max_test": 50
+}

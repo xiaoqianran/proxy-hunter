@@ -1,0 +1,11 @@
+{
+  "id": "proxyscrape_api_socks4",
+  "platform": "ProxyScrape API v4",
+  "protocol_label": "SOCKS4 Elite",
+  "url": "https://api.proxyscrape.com/v4/free-proxy-list/get?request=displayproxies&protocol=socks4&timeout=5000&anonymity=elite",
+  "scheme": "socks4",
+  "format": "txt",
+  "update_frequency": "实时",
+  "notes": "",
+  "max_test": 50
+}

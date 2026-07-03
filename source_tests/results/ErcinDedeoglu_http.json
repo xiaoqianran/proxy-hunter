@@ -1,0 +1,151 @@
+{
+  "source_id": "ErcinDedeoglu_http",
+  "platform": "ErcinDedeoglu/proxies",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/ErcinDedeoglu/proxies/main/proxies/http.txt",
+  "tested_at": "2026-07-03 15:12:51 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 131.6,
+  "total_fetched": 25277,
+  "total_tested": 50,
+  "working": 20,
+  "https_working": 0,
+  "success_rate": 40.0,
+  "avg_latency_ms": 403.5,
+  "median_latency_ms": 11.1,
+  "working_proxies": [
+    {
+      "proxy": "http://172.67.165.47:80",
+      "latency_ms": 7.5,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.131.4.173:80",
+      "latency_ms": 7.7,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.131.5.216:80",
+      "latency_ms": 7.9,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.164.183:80",
+      "latency_ms": 8.2,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.131.7.252:80",
+      "latency_ms": 9.2,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.181.154:80",
+      "latency_ms": 9.7,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://190.93.245.41:80",
+      "latency_ms": 10.1,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.131.4.7:80",
+      "latency_ms": 10.3,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://185.162.229.152:80",
+      "latency_ms": 10.6,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.12.30.45:80",
+      "latency_ms": 10.9,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.70.150:80",
+      "latency_ms": 11.2,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://159.112.235.160:80",
+      "latency_ms": 12.4,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.182.9:80",
+      "latency_ms": 13.1,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://185.162.229.187:80",
+      "latency_ms": 14.0,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.188.6:80",
+      "latency_ms": 14.3,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.64.149.47:80",
+      "latency_ms": 14.8,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://172.67.185.191:80",
+      "latency_ms": 15.2,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://45.131.5.77:80",
+      "latency_ms": 15.5,
+      "https_ok": false,
+      "exit_ip": "64.23.193.238"
+    },
+    {
+      "proxy": "http://47.251.87.199:2083",
+      "latency_ms": 2011.9,
+      "https_ok": false,
+      "exit_ip": "47.251.87.199"
+    },
+    {
+      "proxy": "http://37.187.74.125:80",
+      "latency_ms": 5855.9,
+      "https_ok": false,
+      "exit_ip": "2001:41d0:a:2a7d::1"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "ErcinDedeoglu_http",
+    "platform": "ErcinDedeoglu/proxies",
+    "protocol_label": "HTTP",
+    "url": "https://raw.githubusercontent.com/ErcinDedeoglu/proxies/main/proxies/http.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "不定期",
+    "notes": "高质量备选",
+    "max_test": 50
+  }
+}

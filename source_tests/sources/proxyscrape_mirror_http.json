@@ -1,0 +1,11 @@
+{
+  "id": "proxyscrape_mirror_http",
+  "platform": "proxyscrape/free-proxy-list",
+  "protocol_label": "HTTP Mirror",
+  "url": "https://raw.githubusercontent.com/proxyscrape/free-proxy-list/main/proxies/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "定期",
+  "notes": "GitHub mirror",
+  "max_test": 50
+}

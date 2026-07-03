@@ -1,0 +1,11 @@
+{
+  "id": "openproxylist_socks4",
+  "platform": "roosterkid/openproxylist",
+  "protocol_label": "SOCKS4",
+  "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS4_RAW.txt",
+  "scheme": "socks4",
+  "format": "txt",
+  "update_frequency": "每分钟",
+  "notes": "",
+  "max_test": 50
+}

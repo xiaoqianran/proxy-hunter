@@ -3,9 +3,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Hunt, validate, and rank free proxies from 20+ sources.**
-
-An async Python toolkit that fetches proxies from public APIs and GitHub lists, validates them against real endpoints (not httpbin), runs multi-round filtering, and outputs ready-to-use proxy lists for web scraping.
+**Per-source free proxy testing toolkit** — fetch, validate, and rank proxies from 39 public platforms independently.
 
 [中文文档](README_ZH.md)
 
@@ -13,114 +11,36 @@ An async Python toolkit that fetches proxies from public APIs and GitHub lists, 
 
 ## Why this project?
 
-Most free-proxy tutorials fail because they test against **httpbin.org**, which blocks proxy traffic and makes every source look useless (~5% success). Proxy Hunter uses **icanhazip.com** and real targets (Google, custom APIs) instead.
+Most free-proxy tutorials test against **httpbin.org**, which blocks proxy traffic and makes every source look useless. Proxy Hunter validates each platform separately using **icanhazip.com**, so you can compare real availability per source.
 
-In our benchmark (2026-07-03):
+Latest benchmark (2026-07-03, 39 platforms):
 
-| Metric | Result |
-|--------|--------|
-| Candidates scanned | 11,000+ |
-| Working proxies found | **77** |
-| Premium (HTTPS, <3s) | **11** |
-| Moltbook API verified | **8** |
+| Top source | Protocol | Success rate |
+|------------|----------|--------------|
+| vakhov/fresh-proxy-list | SOCKS4 | **86%** |
+| ProxyScrape API v4 | HTTP Elite | **68%** |
+| ProxyScrape API v4 | SOCKS5 Elite | **58%** |
+| vakhov/fresh-proxy-list | HTTP | **56%** |
+| Proxifly CDN | HTTP | **42%** |
 
----
-
-## Features
-
-- **20+ sources** — Geonode API (filtered), ProxyScrape, OpenProxyList, GitHub lists (proxifly, jetkai, monosans, iplocate…)
-- **Async validation** — `aiohttp` + `aiohttp-socks`, 25–30 concurrent checks
-- **Multi-round filtering** — survivors are re-tested to reduce false positives
-- **Quality scoring** — HTTPS support, latency tiers, anonymity hints
-- **Real-world verification** — optional checks against Google and your target API
-- **Per-channel reports** — Markdown reports for each source under `results/channels/`
-- **Tor support** — local SOCKS5 via `127.0.0.1:9050`
+Full ranking: [`source_tests/results/00_RANKING.md`](source_tests/results/00_RANKING.md)
 
 ---
 
 ## Quick Start
-
-### 1. Install
 
 ```bash
 git clone https://github.com/xiaoqianran/proxy-hunter.git
 cd proxy-hunter
 
 python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
-```
 
-### 2. Hunt proxies (recommended)
-
-```bash
-# Deep hunt — Geonode filters + curated lists (~8–10 min)
-python geonode_hunt.py
-
-# Quick hunt — smaller source set (~8–9 min)
-python quick_hunt.py
-```
-
-> **Runtime**: Both hunt scripts take about **8–10 minutes** on a typical connection. Most of the time is spent validating ~1,900 proxies (25 concurrent, 8s timeout each), not fetching lists.
-
-### 3. Use the results
-
-```bash
-# Best proxies verified for HTTPS + target APIs
-cat results/BEST_FOR_CRAWLING.txt
-```
-
-### 4. Real-world verification (optional)
-
-```bash
-python final_verify.py
-```
-
-### 5. Regenerate channel reports
-
-```bash
-python generate_channel_reports.py
-```
-
----
-
-## Usage in code
-
-### HTTP proxy (aiohttp)
-
-```python
-import aiohttp
-
-PROXY = "http://43.133.15.47:3128"
-
-async with aiohttp.ClientSession() as session:
-    async with session.get("https://example.com", proxy=PROXY) as resp:
-        print(await resp.text())
-```
-
-### SOCKS5 proxy
-
-```python
-from aiohttp_socks import ProxyConnector
-
-connector = ProxyConnector.from_url("socks5://193.25.215.182:22222")
-async with aiohttp.ClientSession(connector=connector) as session:
-    async with session.get("https://example.com") as resp:
-        ...
-```
-
-### Proxy rotation
-
-```python
-proxies = open("results/BEST_FOR_CRAWLING.txt").read().splitlines()
-proxy = proxies[request_count % len(proxies)]
-```
-
-### Tor
-
-```bash
-sudo apt install tor && sudo systemctl start tor
-# SOCKS5: socks5://127.0.0.1:9050
+cd source_tests
+python bootstrap_sources.py   # generate 39 platform configs
+python run_one.py proxifly_http  # test one platform (~1 min)
+python run_all.py              # test all 39 (~10 min)
 ```
 
 ---
@@ -129,80 +49,44 @@ sudo apt install tor && sudo systemctl start tor
 
 ```
 proxy-hunter/
-├── geonode_hunt.py              # Recommended: deep hunt
-├── quick_hunt.py                # Fast hunt
-├── final_verify.py              # Real-site verification
-├── generate_channel_reports.py  # Build per-source .md reports
+├── source_tests/
+│   ├── bootstrap_sources.py  # Generate sources/*.json
+│   ├── run_one.py            # Test single platform
+│   ├── run_all.py            # Test all platforms (isolated)
+│   ├── sources/              # One JSON config per platform (39)
+│   └── results/              # One .md + .json per platform
+│       └── 00_RANKING.md     # Cross-platform ranking
 ├── requirements.txt
-├── _deprecated/                 # Archived failed experiments
-└── results/
-    ├── BEST_FOR_CRAWLING.txt    # Top proxies for scraping
-    ├── ALL_WORKING.json         # All validated proxies
-    ├── ALL_PREMIUM.txt          # HTTPS premium list
-    ├── FINAL_REPORT.md          # Summary report
-    └── channels/                # Per-source markdown reports
-        └── 00-总览.md           # Index (Chinese)
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## Scripts
+## Usage in code
 
-| Script | Purpose | Typical runtime |
-|--------|---------|-----------------|
-| `geonode_hunt.py` | Geonode elite filters + monosans/jetkai/ShiftyTR | **8–10 min** |
-| `quick_hunt.py` | Geonode + monosans + jetkai, 2-round validate | **8–9 min** |
-| `final_verify.py` | Test proxies against Google & custom APIs | ~1 min |
-| `generate_channel_reports.py` | Generate `results/channels/*.md` from JSON | <1 sec |
+```python
+import aiohttp
 
-### Runtime details (`geonode_hunt.py`)
+# Use proxies from source_tests/results/{platform}.json
+PROXY = "http://43.133.15.47:3128"
 
-Benchmark on 2026-07-03 (normal network):
-
-| Phase | Time | Detail |
-|-------|------|--------|
-| Fetch lists | ~30 s | Geonode API (3 filters × 5 pages) + 3 GitHub lists |
-| Validate proxies | ~8 min | ~1,900 candidates, 25 concurrent, 8s timeout |
-| **Total** | **~8.5 min** | Found 77 working, 11 premium |
-
-| Scenario | Expected time |
-|----------|---------------|
-| First run (no prior results) | 8–10 min |
-| Re-run (skips known proxies in `quick_working.json`) | 5–8 min |
-| Slow network / many timeouts | up to ~15 min |
-
-To run faster, edit `geonode_hunt.py`: lower `TIMEOUT` (e.g. `5`) or reduce Geonode pages (`range(1, 3)`), at the cost of finding fewer proxies.
-
-Archived scripts (`test_proxies.py`, `proxy_hunter.py`) are in `_deprecated/` — see `_deprecated/README.md`.
+async with aiohttp.ClientSession() as session:
+    async with session.get("https://example.com", proxy=PROXY) as resp:
+        print(await resp.text())
+```
 
 ---
 
-## Best sources (benchmark)
+## Test rules
 
-| Source | Strategy | Quality |
-|--------|----------|---------|
-| Geonode API | `elite` + `google=true` + `upTime≥80%` | Best metadata |
-| monosans/proxy-list | Small curated GitHub list | Best HTTPS yield |
-| jetkai/proxy-list | Large online list | High volume, needs filtering |
-| Tor (local) | `apt install tor` | 100% up, slower (~1s) |
-
----
-
-## Important notes
-
-1. **Do not use httpbin.org** to test proxies — it returns 502/503 for proxy traffic.
-2. **Free proxies decay fast** — re-run `geonode_hunt.py` before each crawl session.
-3. **Transparent proxies leak your IP** — filtered out when possible; always verify exit IP.
-4. **Rate limit** your scraper even with proxies (1–2 req/s is safe for most APIs).
+- Endpoint: `icanhazip.com` (not httpbin)
+- Per platform: up to **50** random samples when list is larger
+- 25 concurrent, 8s timeout
+- HTTP pass → then HTTPS check
 
 ---
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
-
----
-
-## Contributing
-
-Issues and PRs welcome. If you find a reliable free proxy API, open an issue with the endpoint URL.

@@ -1,0 +1,11 @@
+{
+  "id": "vakhov_https",
+  "platform": "vakhov/fresh-proxy-list",
+  "protocol_label": "HTTPS",
+  "url": "https://vakhov.github.io/fresh-proxy-list/https.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "持续更新",
+  "notes": "",
+  "max_test": 50
+}

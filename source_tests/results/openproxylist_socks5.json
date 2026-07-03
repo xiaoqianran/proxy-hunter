@@ -1,0 +1,30 @@
+{
+  "source_id": "openproxylist_socks5",
+  "platform": "roosterkid/openproxylist",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt",
+  "tested_at": "2026-07-03 15:18:44 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 105.3,
+  "total_fetched": 9,
+  "total_tested": 9,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
+  "sample_errors": [],
+  "config": {
+    "id": "openproxylist_socks5",
+    "platform": "roosterkid/openproxylist",
+    "protocol_label": "SOCKS5",
+    "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt",
+    "scheme": "socks5",
+    "format": "txt",
+    "update_frequency": "每分钟",
+    "notes": "",
+    "max_test": 50
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "iplocate_socks5",
+  "platform": "iplocate/free-proxy-list",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/iplocate/free-proxy-list/main/protocols/socks5.txt",
+  "scheme": "socks5",
+  "format": "txt",
+  "update_frequency": "每30分钟",
+  "notes": "",
+  "max_test": 50
+}

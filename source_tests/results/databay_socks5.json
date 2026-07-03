@@ -1,0 +1,115 @@
+{
+  "source_id": "databay_socks5",
+  "platform": "databay-labs/free-proxy-list",
+  "protocol_label": "SOCKS5",
+  "url": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/master/socks5.txt",
+  "tested_at": "2026-07-03 15:14:51 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 119.3,
+  "total_fetched": 371,
+  "total_tested": 50,
+  "working": 14,
+  "https_working": 12,
+  "success_rate": 28.0,
+  "avg_latency_ms": 1866.9,
+  "median_latency_ms": 979.4,
+  "working_proxies": [
+    {
+      "proxy": "socks5://207.246.68.214:1088",
+      "latency_ms": 288.5,
+      "https_ok": true,
+      "exit_ip": "207.246.68.214"
+    },
+    {
+      "proxy": "socks5://38.49.210.79:40000",
+      "latency_ms": 288.7,
+      "https_ok": false,
+      "exit_ip": "2a09:bac5:1bd7:2be::46:cb"
+    },
+    {
+      "proxy": "socks5://101.33.76.248:1080",
+      "latency_ms": 527.9,
+      "https_ok": true,
+      "exit_ip": "101.33.76.248"
+    },
+    {
+      "proxy": "socks5://5.255.117.250:1080",
+      "latency_ms": 601.8,
+      "https_ok": true,
+      "exit_ip": "5.255.117.250"
+    },
+    {
+      "proxy": "socks5://89.188.76.72:1080",
+      "latency_ms": 690.7,
+      "https_ok": true,
+      "exit_ip": "89.188.76.72"
+    },
+    {
+      "proxy": "socks5://91.98.161.17:1080",
+      "latency_ms": 712.6,
+      "https_ok": true,
+      "exit_ip": "103.124.165.204"
+    },
+    {
+      "proxy": "socks5://144.91.121.61:1088",
+      "latency_ms": 952.7,
+      "https_ok": true,
+      "exit_ip": "144.91.121.61"
+    },
+    {
+      "proxy": "socks5://64.188.65.230:1080",
+      "latency_ms": 1006.1,
+      "https_ok": false,
+      "exit_ip": "64.188.65.230"
+    },
+    {
+      "proxy": "socks5://101.6.50.192:6382",
+      "latency_ms": 1093.2,
+      "https_ok": true,
+      "exit_ip": "188.253.120.136"
+    },
+    {
+      "proxy": "socks5://125.24.156.113:7080",
+      "latency_ms": 1449.8,
+      "https_ok": true,
+      "exit_ip": "1.20.143.87"
+    },
+    {
+      "proxy": "socks5://206.123.156.209:10234",
+      "latency_ms": 1881.6,
+      "https_ok": true,
+      "exit_ip": "185.56.171.119"
+    },
+    {
+      "proxy": "socks5://203.189.135.73:1080",
+      "latency_ms": 2161.7,
+      "https_ok": true,
+      "exit_ip": "203.189.135.73"
+    },
+    {
+      "proxy": "socks5://220.158.234.84:1080",
+      "latency_ms": 5692.6,
+      "https_ok": true,
+      "exit_ip": "220.158.234.84"
+    },
+    {
+      "proxy": "socks5://185.133.239.244:16299",
+      "latency_ms": 8788.9,
+      "https_ok": true,
+      "exit_ip": "185.133.239.244"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "databay_socks5",
+    "platform": "databay-labs/free-proxy-list",
+    "protocol_label": "SOCKS5",
+    "url": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/master/socks5.txt",
+    "scheme": "socks5",
+    "format": "txt",
+    "update_frequency": "每5分钟",
+    "notes": "",
+    "max_test": 50
+  }
+}

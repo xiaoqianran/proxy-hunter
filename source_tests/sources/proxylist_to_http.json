@@ -1,0 +1,11 @@
+{
+  "id": "proxylist_to_http",
+  "platform": "proxylist-to/proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "补充源",
+  "max_test": 50
+}

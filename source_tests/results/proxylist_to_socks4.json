@@ -1,0 +1,103 @@
+{
+  "source_id": "proxylist_to_socks4",
+  "platform": "proxylist-to/proxy-list",
+  "protocol_label": "SOCKS4",
+  "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks4.txt",
+  "tested_at": "2026-07-03 15:20:17 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 123.8,
+  "total_fetched": 261,
+  "total_tested": 50,
+  "working": 12,
+  "https_working": 0,
+  "success_rate": 24.0,
+  "avg_latency_ms": 2714.8,
+  "median_latency_ms": 4205.1,
+  "working_proxies": [
+    {
+      "proxy": "socks4://104.200.135.46:4145",
+      "latency_ms": 100.0,
+      "https_ok": false,
+      "exit_ip": "104.200.135.46"
+    },
+    {
+      "proxy": "socks4://162.253.68.97:4145",
+      "latency_ms": 100.1,
+      "https_ok": false,
+      "exit_ip": "162.253.68.97"
+    },
+    {
+      "proxy": "socks4://198.8.94.170:4145",
+      "latency_ms": 394.1,
+      "https_ok": false,
+      "exit_ip": "198.8.94.170"
+    },
+    {
+      "proxy": "socks4://72.195.34.35:27360",
+      "latency_ms": 510.2,
+      "https_ok": false,
+      "exit_ip": "72.195.34.35"
+    },
+    {
+      "proxy": "socks4://68.1.210.163:4145",
+      "latency_ms": 515.6,
+      "https_ok": false,
+      "exit_ip": "68.1.210.163"
+    },
+    {
+      "proxy": "socks4://47.252.1.180:8080",
+      "latency_ms": 4140.5,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://96.126.118.190:801",
+      "latency_ms": 4269.7,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://94.74.80.88:45554",
+      "latency_ms": 4333.6,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://8.219.167.110:8082",
+      "latency_ms": 4379.9,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://8.219.5.240:20201",
+      "latency_ms": 4591.5,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://110.238.111.229:8012",
+      "latency_ms": 4595.9,
+      "https_ok": false,
+      "exit_ip": ""
+    },
+    {
+      "proxy": "socks4://39.104.89.111:8020",
+      "latency_ms": 4646.4,
+      "https_ok": false,
+      "exit_ip": ""
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "proxylist_to_socks4",
+    "platform": "proxylist-to/proxy-list",
+    "protocol_label": "SOCKS4",
+    "url": "https://raw.githubusercontent.com/proxylist-to/proxy-list/main/socks4.txt",
+    "scheme": "socks4",
+    "format": "txt",
+    "update_frequency": "不定期",
+    "notes": "",
+    "max_test": 50
+  }
+}

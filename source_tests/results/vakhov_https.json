@@ -1,0 +1,30 @@
+{
+  "source_id": "vakhov_https",
+  "platform": "vakhov/fresh-proxy-list",
+  "protocol_label": "HTTPS",
+  "url": "https://vakhov.github.io/fresh-proxy-list/https.txt",
+  "tested_at": "2026-07-03 15:22:51 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 107.1,
+  "total_fetched": 6,
+  "total_tested": 6,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
+  "sample_errors": [],
+  "config": {
+    "id": "vakhov_https",
+    "platform": "vakhov/fresh-proxy-list",
+    "protocol_label": "HTTPS",
+    "url": "https://vakhov.github.io/fresh-proxy-list/https.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "持续更新",
+    "notes": "",
+    "max_test": 50
+  }
+}

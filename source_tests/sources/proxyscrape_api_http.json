@@ -1,0 +1,11 @@
+{
+  "id": "proxyscrape_api_http",
+  "platform": "ProxyScrape API v4",
+  "protocol_label": "HTTP Elite",
+  "url": "https://api.proxyscrape.com/v4/free-proxy-list/get?request=displayproxies&protocol=http&timeout=5000&anonymity=elite",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "实时",
+  "notes": "API 可过滤",
+  "max_test": 50
+}

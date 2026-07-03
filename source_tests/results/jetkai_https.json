@@ -1,0 +1,43 @@
+{
+  "source_id": "jetkai_https",
+  "platform": "jetkai/proxy-list",
+  "protocol_label": "HTTPS",
+  "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
+  "tested_at": "2026-07-03 15:16:26 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 93.3,
+  "total_fetched": 2161,
+  "total_tested": 50,
+  "working": 2,
+  "https_working": 0,
+  "success_rate": 4.0,
+  "avg_latency_ms": 4842.9,
+  "median_latency_ms": 4842.9,
+  "working_proxies": [
+    {
+      "proxy": "http://181.78.27.38:999",
+      "latency_ms": 3348.0,
+      "https_ok": false,
+      "exit_ip": "181.78.27.38"
+    },
+    {
+      "proxy": "http://103.48.68.37:83",
+      "latency_ms": 6337.7,
+      "https_ok": false,
+      "exit_ip": "103.48.68.34"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "jetkai_https",
+    "platform": "jetkai/proxy-list",
+    "protocol_label": "HTTPS",
+    "url": "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "每小时",
+    "notes": "HTTPS 隧道列表",
+    "max_test": 50
+  }
+}

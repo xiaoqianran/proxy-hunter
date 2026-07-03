@@ -1,0 +1,30 @@
+{
+  "source_id": "proxifly_https",
+  "platform": "proxifly/free-proxy-list",
+  "protocol_label": "HTTPS",
+  "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/https/data.txt",
+  "tested_at": "2026-07-03 15:19:28 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 18.5,
+  "total_fetched": 1155,
+  "total_tested": 50,
+  "working": 0,
+  "https_working": 0,
+  "success_rate": 0.0,
+  "avg_latency_ms": null,
+  "median_latency_ms": null,
+  "working_proxies": [],
+  "sample_errors": [],
+  "config": {
+    "id": "proxifly_https",
+    "platform": "proxifly/free-proxy-list",
+    "protocol_label": "HTTPS",
+    "url": "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/https/data.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "每5分钟",
+    "notes": "",
+    "max_test": 50
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "source_id": "TheSpeedX_http",
+  "platform": "TheSpeedX/PROXY-List",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+  "tested_at": "2026-07-03 15:13:27 UTC",
+  "fetch_ok": true,
+  "fetch_error": null,
+  "fetch_ms": 9.3,
+  "total_fetched": 2710,
+  "total_tested": 50,
+  "working": 8,
+  "https_working": 1,
+  "success_rate": 16.0,
+  "avg_latency_ms": 2358.8,
+  "median_latency_ms": 2269.4,
+  "working_proxies": [
+    {
+      "proxy": "http://147.78.0.81:9443",
+      "latency_ms": 514.1,
+      "https_ok": false,
+      "exit_ip": "147.78.0.81"
+    },
+    {
+      "proxy": "http://103.43.191.71:8888",
+      "latency_ms": 1806.7,
+      "https_ok": false,
+      "exit_ip": "103.43.191.71"
+    },
+    {
+      "proxy": "http://47.252.11.233:20",
+      "latency_ms": 2142.9,
+      "https_ok": false,
+      "exit_ip": "47.252.11.233"
+    },
+    {
+      "proxy": "http://8.221.139.222:6379",
+      "latency_ms": 2222.9,
+      "https_ok": false,
+      "exit_ip": "8.221.139.222"
+    },
+    {
+      "proxy": "http://47.238.134.126:100",
+      "latency_ms": 2315.8,
+      "https_ok": false,
+      "exit_ip": "47.238.134.126"
+    },
+    {
+      "proxy": "http://8.209.96.245:80",
+      "latency_ms": 2385.2,
+      "https_ok": false,
+      "exit_ip": "8.209.96.245"
+    },
+    {
+      "proxy": "http://8.213.222.157:3129",
+      "latency_ms": 2420.4,
+      "https_ok": false,
+      "exit_ip": "8.213.222.157"
+    },
+    {
+      "proxy": "http://103.26.176.31:8080",
+      "latency_ms": 5062.7,
+      "https_ok": true,
+      "exit_ip": "103.26.176.31"
+    }
+  ],
+  "sample_errors": [],
+  "config": {
+    "id": "TheSpeedX_http",
+    "platform": "TheSpeedX/PROXY-List",
+    "protocol_label": "HTTP",
+    "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+    "scheme": "http",
+    "format": "txt",
+    "update_frequency": "每日",
+    "notes": "体量大",
+    "max_test": 50
+  }
+}

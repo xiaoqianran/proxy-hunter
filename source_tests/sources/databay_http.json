@@ -1,0 +1,11 @@
+{
+  "id": "databay_http",
+  "platform": "databay-labs/free-proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/master/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "每5分钟",
+  "notes": "零MITM/严格SSL",
+  "max_test": 50
+}

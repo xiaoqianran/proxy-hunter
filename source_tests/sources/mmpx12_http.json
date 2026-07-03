@@ -1,0 +1,11 @@
+{
+  "id": "mmpx12_http",
+  "platform": "mmpx12/proxy-list",
+  "protocol_label": "HTTP",
+  "url": "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
+  "scheme": "http",
+  "format": "txt",
+  "update_frequency": "不定期",
+  "notes": "高质量备选",
+  "max_test": 50
+}
